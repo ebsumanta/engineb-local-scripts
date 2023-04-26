@@ -1,0 +1,49 @@
+erp_id: clg3dybe110752701nrlnoqq5xx
+mappings:
+-   extract: REPORT
+    reports:
+    -   input_files:
+        -   encoding_format: utf-8
+            fields:
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: NO_NAME0
+                isOpen: false
+                nullable: true
+                required: false
+            -   cdm_field_names:
+                - amountEnding
+                data_type: decimal
+                date_format: ''
+                field_name: Debit
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names:
+                - amountEnding
+                data_type: decimal
+                date_format: ''
+                field_name: Credit
+                isOpen: false
+                nullable: true
+                required: true
+            file_name: trialBalance.csv
+            mandatory_field_check:
+            -   cdm_field_name: glAccountNumber
+                occurrence_count: 0
+            -   cdm_field_name: amountEnding
+                occurrence_count: 2
+            -   cdm_field_name: amountBeginning
+                occurrence_count: 0
+            template:
+                exclusion:
+                    aggr: or
+                    rules:
+                    -   column: 1
+                        contains: TOTAL
+                    -   column: 2
+                        contains: 'NULL'
+                sheet_name: ''
+                start_row: 5
+        report_type: trialBalance
