@@ -167,11 +167,28 @@ def copy_groupped_data_to_continaer(grouped_dataframe):
     try:
         grouped_dataframe.to_csv(f"{hdfs_path}trialBalance_groupped_{global_group_id}.csv",index=False)
         if not is_local:
-            dbutils.fs.cp(f"dbfs:{hdfs_path}trialBalance_groupped_{global_group_id}.csv",
-                          f"{output_container_path}trialBalance_groupped_{global_group_id}.csv",
-                          recurse=True)
+            dbutils.fs.cp(
+                f"dbfs:{hdfs_path}trialBalance_groupped_{global_group_id}.csv",
+                f"{output_container_path}trialBalance_groupped_{global_group_id}.csv",
+                recurse=True
+            )
     except Exception as ex:
         log(f"Exception(copy_groupped_data_to_continaer): {str(ex)}")
+
+
+def copy_scorecard_data_to_continaer(scorecard_data):
+    try:
+        with open(f"{hdfs_path}gdqs_{global_group_id}.json", "w") as outfile:
+            json.dump(scorecard_data, outfile)
+            log("Grouping created, evaluated and saved!!!")
+
+        if not is_local:
+            dbutils.fs.cp(f"dbfs:{hdfs_path}gdqs_{global_group_id}.jsonv",
+                          f"{output_container_path}gdqs_{global_group_id}.json",
+                          recurse=True)
+    except Exception as ex:
+        log(f"Exception(copy_scorecard_data_to_continaer): {str(ex)}")
+
 
 # cmd 9
 def fetch_groupings():
@@ -317,16 +334,20 @@ def create_grouped_trial_balance(grouping_data_config):
             log(f"copying grouping data to container")
             copy_groupped_data_to_continaer(grouped_trialbalance)
             
-            # log(f"quality score card initiated")
-            # quality_scorecard = evaluate_grouping(grouped_trialbalance)
-            # grouping_data["quality"] = quality_scorecard
+            log(f"quality score card initiated")
+            quality_scorecard = evaluate_grouping(grouped_trialbalance)
+            grouping_data["quality"] = quality_scorecard
 
-            # grouping_df.columns = [
-            #     "accountType" if col == "account" else col
-            #     for col in list(grouping_df.columns)
-            # ]
-            # grouping_data["grouping"] = grouping_df.to_dict("records")
-            # log(f"quality analysis completed. Exiting the mapping function.")
+            grouping_df.columns = [
+                "accountType" if col == "account" else col
+                for col in list(grouping_df.columns)
+            ]
+            grouping_data["grouper"] = grouping_df.to_dict("records")
+            log(f"quality analysis completed. Exiting the mapping function.")
+            
+
+            copy_scorecard_data_to_continaer(grouping_data)
+    
             print("grouped_trialbalance: ", grouped_trialbalance)
         else:
             log(f"grouping_response[data][nominalCodeMappings]= {grouping_response['data']['nominalCodeMappings']}")
