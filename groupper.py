@@ -298,10 +298,10 @@ def create_grouped_trial_balance(grouping_data_config):
         )
         log(f"Received response from GraphQL")
 
-        if grouping_response["data"]["nominalCodeMappings"]:
+        if grouping_response["data"]["getDataIngestionGroupings"]:
             log(f"Mapping started")
-            grouping_data = grouping_response["data"]["nominalCodeMappings"]
-            grouping_df = pd.DataFrame(grouping_data["grouping"])
+            grouping_data = grouping_response["data"]["getDataIngestionGroupings"]
+            grouping_df = pd.DataFrame(grouping_data["grouper"]["groupingCodes"])
 
             # for IE-1021
             grouping_df = grouping_df.replace("nan", np.nan)
