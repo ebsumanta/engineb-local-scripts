@@ -172,6 +172,8 @@ def copy_groupped_data_to_continaer(grouped_dataframe):
                 f"{output_container_path}trialBalance_groupped_{global_group_id}.csv",
                 recurse=True
             )
+        else:
+            log("Running locally: did not pushed grouped dataframe csv to container.")
     except Exception as ex:
         log(f"Exception(copy_groupped_data_to_continaer): {str(ex)}")
 
@@ -186,6 +188,8 @@ def copy_scorecard_data_to_continaer(scorecard_data):
             dbutils.fs.cp(f"dbfs:{hdfs_path}gdqs_{global_group_id}.jsonv",
                           f"{output_container_path}gdqs_{global_group_id}.json",
                           recurse=True)
+        else:
+            log("Running locally: did not pushed the scorecard json to container")
     except Exception as ex:
         log(f"Exception(copy_scorecard_data_to_continaer): {str(ex)}")
 
