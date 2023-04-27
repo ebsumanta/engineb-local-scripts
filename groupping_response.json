@@ -1,6 +1,7 @@
 {
 	"data": {
-		"getDataIngestionGroupings": [{
+		"getDataIngestionGroupings": [
+            {
 			"id": "clgz0slhh0807dt1wz2zma4hc",
 			"name": "dishant-2",
 			"startDate": "2023-04-27T11:06:53.764Z",

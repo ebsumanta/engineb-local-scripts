@@ -306,7 +306,7 @@ def create_grouped_trial_balance(grouping_data_config):
             # for IE-1021
             grouping_df = grouping_df.replace("nan", np.nan)
             log(f"Trying to do left merge")
-            grouped_trialbalance = cdm_tb_output["data"].merge(
+            grouped_trialbalance = cdm_tb_output.merge(
                 grouping_df,
                 left_on="glAccountNumber",
                 right_on="nominalCode",
@@ -317,17 +317,17 @@ def create_grouped_trial_balance(grouping_data_config):
             log(f"copying grouping data to container")
             copy_groupped_data_to_continaer(grouped_trialbalance)
             
-            log(f"quality score card initiated")
-            quality_scorecard = evaluate_grouping(grouped_trialbalance)
-            grouping_data["quality"] = quality_scorecard
+            # log(f"quality score card initiated")
+            # quality_scorecard = evaluate_grouping(grouped_trialbalance)
+            # grouping_data["quality"] = quality_scorecard
 
-            grouping_df.columns = [
-                "accountType" if col == "account" else col
-                for col in list(grouping_df.columns)
-            ]
-            grouping_data["grouping"] = grouping_df.to_dict("records")
-            log(f"quality analysis completed. Exiting the mapping function.")
-            print(grouping_data)
+            # grouping_df.columns = [
+            #     "accountType" if col == "account" else col
+            #     for col in list(grouping_df.columns)
+            # ]
+            # grouping_data["grouping"] = grouping_df.to_dict("records")
+            # log(f"quality analysis completed. Exiting the mapping function.")
+            print("grouped_trialbalance: ", grouped_trialbalance)
         else:
             log(f"grouping_response[data][nominalCodeMappings]= {grouping_response['data']['nominalCodeMappings']}")
     except Exception as e:
