@@ -1,0 +1,295 @@
+segment03,segment04,segment05,fsCaption,glAccountNumber,parentGlAccountNumber,segment01,segment02,chartOfAccountType,accountSubType,accountType,businessUnitCode,glAccountDescription,controllingIntegration,consolidationGroupChartOfAccounts,glAccountName
+,,,,1000,,,,,,,,,,,BALANCE SHEET
+,,,,1002,,,,,,,,,,,ASSETS
+,,,,1003,,,,,,,,,,,Fixed Assets
+,,,,1005,,,,,,,,,,,Tangible Fixed Assets
+,,,,1100,,,,,,,,,,,Land and Buildings
+,,,,1110,,,,,,,,,,,Land and Buildings
+NATIONAL,,NATIONAL,,1120,,,MISC,,,,,,,,Increases during the Year
+NATIONAL,,NATIONAL,,1130,,,MISC,,,,,,,,Decreases during the Year
+,,,,1140,,,,,,,,,,,"Accum. Depreciation, Buildings"
+,,,,1190,,,,,,,,,,,"Land and Buildings, Total"
+,,,,1200,,,,,,,,,,,Operating Equipment
+,,,,1210,,,,,,,,,,,Operating Equipment
+NATIONAL,,NATIONAL,,1220,,,MISC,,,,,,,,Increases during the Year
+NATIONAL,,NATIONAL,,1230,,,MISC,,,,,,,,Decreases during the Year
+,,,,1240,,,,,,,,,,,"Accum. Depr., Oper. Equip."
+,,,,1290,,,,,,,,,,,"Operating Equipment, Total"
+,,,,1300,,,,,,,,,,,Vehicles
+,,,,1310,,,,,,,,,,,Vehicles
+NATIONAL,,NATIONAL,,1320,,,MISC,,,,,,,,Increases during the Year
+NATIONAL,,NATIONAL,,1330,,,MISC,,,,,,,,Decreases during the Year
+,,,,1340,,,,,,,,,,,"Accum. Depreciation, Vehicles"
+,,,,1390,,,,,,,,,,,"Vehicles, Total"
+,,,,1395,,,,,,,,,,,"Tangible Fixed Assets, Total"
+,,,,1999,,,,,,,,,,,"Fixed Assets, Total"
+,,,,2000,,,,,,,,,,,Current Assets
+,,,,2100,,,,,,,,,,,Inventory
+,,,,2110,,,,,,,,,,,Resale Items
+,,,,2111,,,,,,,,,,,Resale Items (Interim)
+,,,,2112,,,,,,,,,,,Cost of Resale Sold (Interim)
+,,,,2120,,,,,,,,,,,Finished Goods
+,,,,2121,,,,,,,,,,,Finished Goods (Interim)
+,,,,2130,,,,,,,,,,,Raw Materials
+,,,,2131,,,,,,,,,,,Raw Materials (Interim)
+,,,,2132,,,,,,,,,,,Cost of Raw Mat.Sold (Interim)
+,,,,2140,,,,,,,,,,,"WIP Account, Finished goods"
+,,,,2180,,,,,,,,,,,Primo Inventory
+,,,,2190,,,,,,,,,,,"Inventory, Total"
+,,,,2200,,,,,,,,,,,Job WIP
+,,,,2210,,,,,,,,,,,WIP Sales
+,,,,2211,,,,,,,,,,,WIP Job Sales
+,,,,2212,,,,,,,,,,,Invoiced Job Sales
+,,,,2220,,,,,,,,,,,"WIP Sales, Total"
+,,,,2230,,,,,,,,,,,WIP Costs
+,,,,2231,,,,,,,,,,,WIP Job Costs
+,,,,2232,,,,,,,,,,,Accrued Job Costs
+,,,,2240,,,,,,,,,,,"WIP Costs, Total"
+,,,,2290,,,,,,,,,,,"Job WIP, Total"
+,,,,2300,,,,,,,,,,,Accounts Receivable
+,,,,2310,,,,,,,,,,,Customers Domestic
+,,,,2320,,,,,,,,,,,"Customers, Foreign"
+,,,,2325,,,,,,,,,,,"Customers, Intercompany"
+,,,,2330,,,,,,,,,,,Accrued Interest
+,,,,2340,,,,,,,,,,,Other Receivables
+,,,,2390,,,,,,,,,,,"Accounts Receivable, Total"
+,,,,2400,,,,,,,,,,,Purchase Prepayments
+,,,,2410,,,NO VAT,,,,,,,,Vendor Prepayments VAT 0%
+,,,,2420,,,SERVICES,,,,,,,,Vendor Prepayments VAT 10%
+,,,,2430,,,RETAIL,,,,,,,,Vendor Prepayments VAT 25%
+,,,,2440,,,,,,,,,,,"Purchase Prepayments, Total"
+,,,,2800,,,,,,,,,,,Securities
+,,,,2810,,,,,,,,,,,Bonds
+,,,,2890,,,,,,,,,,,"Securities, Total"
+,,,,2900,,,,,,,,,,,Liquid Assets
+,,,,2910,,,,,,,,,,,Cash
+,,,,2920,,,,,,,,,,,"Bank, LCY"
+,,,,2930,,,,,,,,,,,Bank Currencies
+,,,,2940,,,,,,,,,,,Giro Account
+,,,,2990,,,,,,,,,,,"Liquid Assets, Total"
+,,,,2995,,,,,,,,,,,"Current Assets, Total"
+,,,,2999,,,,,,,,,,,TOTAL ASSETS
+,,,,3000,,,,,,,,,,,LIABILITIES AND EQUITY
+,,,,3100,,,,,,,,,,,Stockholder's Equity
+,,,,3110,,,,,,,,,,,Capital Stock
+,,,,3120,,,,,,,,,,,Retained Earnings
+,,,,3195,,,,,,,,,,,Net Income for the Year
+,,,,3199,,,,,,,,,,,Total Stockholder's Equity
+,,,,4000,,,,,,,,,,,Allowances
+,,,,4010,,,,,,,,,,,Deferred Taxes
+,,,,4999,,,,,,,,,,,"Allowances, Total"
+,,,,5000,,,,,,,,,,,Liabilities
+,,,,5100,,,,,,,,,,,Long-term Liabilities
+,,,,5110,,,,,,,,,,,Long-term Bank Loans
+,,,,5120,,,,,,,,,,,Mortgage
+,,,,5290,,,,,,,,,,,"Long-term Liabilities, Total"
+,,,,5300,,,,,,,,,,,Short-term Liabilities
+,,,,5310,,,,,,,,,,,Revolving Credit
+,,,,5350,,,,,,,,,,,Sales Prepayments
+,,,,5360,,,NO VAT,,,,,,,,Customer Prepayments VAT 0%
+,,,,5370,,,SERVICES,,,,,,,,Customer Prepayments VAT 10%
+,,,,5380,,,RETAIL,,,,,,,,Customer Prepayments VAT 25%
+,,,,5390,,,,,,,,,,,"Sales Prepayments, Total"
+,,,,5400,,,,,,,,,,,Accounts Payable
+,,,,5410,,,,,,,,,,,"Vendors, Domestic"
+,,,,5420,,,,,,,,,,,"Vendors, Foreign"
+,,,,5425,,,,,,,,,,,"Vendors, Intercompany"
+,,,,5490,,,,,,,,,,,"Accounts Payable, Total"
+,,,,5500,,,,,,,,,,,Inv. Adjmt. (Interim)
+,,,,5510,,,,,,,,,,,"Inv. Adjmt. (Interim), Retail"
+,,,,5530,,,,,,,,,,,"Inv. Adjmt. (Interim), Raw Mat"
+,,,,5590,,,,,,,,,,,"Inv. Adjmt. (Interim), Total"
+,,,,5600,,,,,,,,,,,VAT
+,,,,5610,,,,,,,,,,,Sales VAT 25 %
+,,,,5611,,,,,,,,,,,Sales VAT 10 %
+,,,,5620,,,,,,,,,,,Purchase VAT 25 % EU
+,,,,5621,,,,,,,,,,,Purchase VAT 10 % EU
+,,,,5630,,,,,,,,,,,Purchase VAT 25 %
+,,,,5631,,,,,,,,,,,Purchase VAT 10 %
+,,,,5710,,,,,,,,,,,Fuel Tax
+,,,,5720,,,,,,,,,,,Electricity Tax
+,,,,5730,,,,,,,,,,,Natural Gas Tax
+,,,,5740,,,,,,,,,,,Coal Tax
+,,,,5750,,,,,,,,,,,CO2 Tax
+,,,,5760,,,,,,,,,,,Water Tax
+,,,,5780,,,,,,,,,,,VAT Payable
+,,,,5790,,,,,,,,,,,"VAT, Total"
+,,,,5795,,,,,,,,,,,Prepaid Service Contracts
+NATIONAL,,NATIONAL,,5796,,,SERVICES,,,,,,,,Prepaid Hardware Contracts
+NATIONAL,,NATIONAL,,5797,,,SERVICES,,,,,,,,Prepaid Software Contracts
+,,,,5799,,,,,,,,,,,Total Prepaid Service Contract
+,,,,5800,,,,,,,,,,,Personnel-related Items
+,,,,5810,,,,,,,,,,,Withholding Taxes Payable
+,,,,5820,,,,,,,,,,,Supplementary Taxes Payable
+,,,,5830,,,,,,,,,,,Payroll Taxes Payable
+,,,,5840,,,,,,,,,,,Vacation Compensation Payable
+,,,,5890,,,,,,,,,,,Total Personnel-related Items
+,,,,5900,,,,,,,,,,,Other Liabilities
+,,,,5910,,,,,,,,,,,Dividends for the Fiscal Year
+,,,,5920,,,,,,,,,,,Corporate Taxes Payable
+,,,,5990,,,,,,,,,,,"Other Liabilities, Total"
+,,,,5995,,,,,,,,,,,"Short-term Liabilities, Total"
+,,,,5997,,,,,,,,,,,Total Liabilities
+,,,,5999,,,,,,,,,,,TOTAL LIABILITIES AND EQUITY
+,,,,6000,,,,,,,,,,,INCOME STATEMENT
+,,,,6100,,,,,,,,,,,Revenue
+,,,,6105,,,,,,,,,,,Sales of Retail
+NATIONAL,,NATIONAL,,6110,,,RETAIL,,,,,,,,"Sales, Retail - Dom."
+EU,,EU,,6120,,,RETAIL,,,,,,,,"Sales, Retail - EU"
+EXPORT,,EXPORT,,6130,,,RETAIL,,,,,,,,"Sales, Retail - Export"
+,,,,6190,,,,,,,,,,,"Job Sales Applied, Retail"
+,,,,6191,,,,,,,,,,,"Job Sales Adjmt., Retail"
+,,,,6195,,,,,,,,,,,Total Sales of Retail
+,,,,6205,,,,,,,,,,,Sales of Raw Materials
+NATIONAL,,NATIONAL,,6210,,,RAW MAT,,,,,,,,"Sales, Raw Materials - Dom."
+EU,,EU,,6220,,,RAW MAT,,,,,,,,"Sales, Raw Materials - EU"
+EXPORT,,EXPORT,,6230,,,RAW MAT,,,,,,,,"Sales, Raw Materials - Export"
+,,,,6290,,,,,,,,,,,"Job Sales Applied, Raw Mat."
+,,,,6291,,,,,,,,,,,"Job Sales Adjmt., Raw Mat."
+,,,,6295,,,,,,,,,,,Total Sales of Raw Materials
+,,,,6405,,,,,,,,,,,Sales of Resources
+NATIONAL,,NATIONAL,,6410,,,SERVICES,,,,,,,,"Sales, Resources - Dom."
+EU,,EU,,6420,,,SERVICES,,,,,,,,"Sales, Resources - EU"
+EXPORT,,EXPORT,,6430,,,SERVICES,,,,,,,,"Sales, Resources - Export"
+,,,,6490,,,,,,,,,,,"Job Sales Applied, Resources"
+,,,,6491,,,,,,,,,,,"Job Sales Adjmt., Resources"
+,,,,6495,,,,,,,,,,,Total Sales of Resources
+,,,,6605,,,,,,,,,,,Sales of Jobs
+NATIONAL,,NATIONAL,,6610,,,MISC,,,,,,,,"Sales, Other Job Expenses"
+,,,,6620,,,,,,,,,,,Job Sales
+,,,,6695,,,,,,,,,,,Total Sales of Jobs
+NATIONAL,,NATIONAL,,6710,,,SERVICES,,,,,,,,Consulting Fees - Dom.
+NATIONAL,,NATIONAL,,6810,,,MISC,,,,,,,,Fees and Charges Rec. - Dom.
+,,,,6910,,,,,,,,,,,Discount Granted
+,,,,6950,,,,,,,,,,,Sales of Service Contracts
+NATIONAL,,NATIONAL,,6955,,,SERVICES,,,,,,,,Service Contract Sale
+,,,,6959,,,,,,,,,,,Total Sale of Serv. Contracts
+,,,,6995,,,,,,,,,,,Total Revenue
+,,,,7100,,,,,,,,,,,Cost
+,,,,7105,,,,,,,,,,,Cost of Retail
+NATIONAL,,NATIONAL,,7110,,,RETAIL,,,,,,,,"Purch., Retail - Dom."
+EU,,EU,,7120,,,RETAIL,,,,,,,,"Purch., Retail - EU"
+EXPORT,,EXPORT,,7130,,,RETAIL,,,,,,,,"Purch., Retail - Export"
+,,,,7140,,,,,,,,,,,"Disc. Received, Retail"
+NATIONAL,,NATIONAL,,7150,,,MISC,,,,,,,,"Delivery Expenses, Retail"
+,,,,7170,,,,,,,,,,,"Inventory Adjmt., Retail"
+,,,,7180,,,,,,,,,,,"Job Cost Applied, Retail"
+,,,,7181,,,,,,,,,,,"Job Cost Adjmt., Retail"
+,,,,7190,,,,,,,,,,,Cost of Retail Sold
+,,,,7191,,,,,,,,,,,"Direct Cost Applied, Retail"
+,,,,7192,,,,,,,,,,,"Overhead Applied, Retail"
+,,,,7193,,,,,,,,,,,"Purchase Variance, Retail"
+,,,,7195,,,,,,,,,,,Total Cost of Retail
+,,,,7205,,,,,,,,,,,Cost of Raw Materials
+NATIONAL,,NATIONAL,,7210,,,RAW MAT,,,,,,,,"Purch., Raw Materials - Dom."
+EU,,EU,,7220,,,RAW MAT,,,,,,,,"Purch., Raw Materials - EU"
+EXPORT,,EXPORT,,7230,,,RAW MAT,,,,,,,,"Purch., Raw Materials - Export"
+,,,,7240,,,,,,,,,,,"Disc. Received, Raw Materials"
+NATIONAL,,NATIONAL,,7250,,,MISC,,,,,,,,"Delivery Expenses, Raw Mat."
+,,,,7270,,,,,,,,,,,"Inventory Adjmt., Raw Mat."
+,,,,7280,,,,,,,,,,,"Job Cost Applied, Raw Mat."
+,,,,7281,,,,,,,,,,,"Job Cost Adjmt., Raw Materials"
+,,,,7290,,,,,,,,,,,Cost of Raw Materials Sold
+,,,,7291,,,,,,,,,,,"Direct Cost Applied, Rawmat."
+,,,,7292,,,,,,,,,,,"Overhead Applied, Rawmat."
+,,,,7293,,,,,,,,,,,"Purchase Variance, Rawmat."
+,,,,7295,,,,,,,,,,,Total Cost of Raw Materials
+,,,,7405,,,,,,,,,,,Cost of Resources
+,,,,7480,,,,,,,,,,,"Job Cost Applied, Resources"
+,,,,7481,,,,,,,,,,,"Job Cost Adjmt., Resources"
+,,,,7490,,,,,,,,,,,Cost of Resources Used
+,,,,7495,,,,,,,,,,,Total Cost of Resources
+,,,,7620,,,,,,,,,,,Job Costs
+,,,,7705,,,,,,,,,,,Cost of Capacities
+,,,,7710,,,,,,,,,,,Cost of Capacities
+,,,,7791,,,,,,,,,,,"Direct Cost Applied, Cap."
+,,,,7792,,,,,,,,,,,"Overhead Applied, Cap."
+,,,,7793,,,,,,,,,,,"Purchase Variance, Cap."
+,,,,7795,,,,,,,,,,,Total Cost of Capacities
+,,,,7805,,,,,,,,,,,Variance
+,,,,7890,,,,,,,,,,,Material Variance
+,,,,7891,,,,,,,,,,,Capacity Variance
+,,,,7892,,,,,,,,,,,Subcontracted Variance
+,,,,7893,,,,,,,,,,,Cap. Overhead Variance
+,,,,7894,,,,,,,,,,,Mfg. Overhead Variance
+,,,,7895,,,,,,,,,,,Total Variance
+,,,,7995,,,,,,,,,,,Total Cost
+,,,,8000,,,,,,,,,,,Operating Expenses
+,,,,8100,,,,,,,,,,,Building Maintenance Expenses
+NATIONAL,,NATIONAL,,8110,,,MISC,,,,,,,,Cleaning
+NATIONAL,,NATIONAL,,8120,,,MISC,,,,,,,,Electricity and Heating
+NATIONAL,,NATIONAL,,8130,,,MISC,,,,,,,,Repairs and Maintenance
+,,,,8190,,,,,,,,,,,Total Bldg. Maint. Expenses
+,,,,8200,,,,,,,,,,,Administrative Expenses
+NATIONAL,,NATIONAL,,8210,,,MISC,,,,,,,,Office Supplies
+NATIONAL,,NATIONAL,,8230,,,MISC,,,,,,,,Phone and Fax
+NATIONAL,,NATIONAL,,8240,,,NO VAT,,,,,,,,Postage
+,,,,8290,,,,,,,,,,,Total Administrative Expenses
+,,,,8300,,,,,,,,,,,Computer Expenses
+NATIONAL,,NATIONAL,,8310,,,MISC,,,,,,,,Software
+NATIONAL,,NATIONAL,,8320,,,SERVICES,,,,,,,,Consultant Services
+NATIONAL,,NATIONAL,,8330,,,MISC,,,,,,,,Other Computer Expenses
+,,,,8390,,,,,,,,,,,Total Computer Expenses
+,,,,8400,,,,,,,,,,,Selling Expenses
+NATIONAL,,NATIONAL,,8410,,,MISC,,,,,,,,Advertising
+NATIONAL,,NATIONAL,,8420,,,MISC,,,,,,,,Entertainment and PR
+NATIONAL,,NATIONAL,,8430,,,NO VAT,,,,,,,,Travel
+NATIONAL,,NATIONAL,,8450,,,MISC,,,,,,,,Delivery Expenses
+,,,,8490,,,,,,,,,,,Total Selling Expenses
+,,,,8500,,,,,,,,,,,Vehicle Expenses
+NATIONAL,,NATIONAL,,8510,,,MISC,,,,,,,,Gasoline and Motor Oil
+NATIONAL,,NATIONAL,,8520,,,NO VAT,,,,,,,,Registration Fees
+NATIONAL,,NATIONAL,,8530,,,MISC,,,,,,,,Repairs and Maintenance
+,,,,8590,,,,,,,,,,,Total Vehicle Expenses
+,,,,8600,,,,,,,,,,,Other Operating Expenses
+,,,,8610,,,,,,,,,,,Cash Discrepancies
+,,,,8620,,,,,,,,,,,Bad Debt Expenses
+NATIONAL,,NATIONAL,,8630,,,MISC,,,,,,,,Legal and Accounting Services
+NATIONAL,,NATIONAL,,8640,,,MISC,,,,,,,,Miscellaneous
+,,,,8690,,,,,,,,,,,"Other Operating Exp., Total"
+,,,,8695,,,,,,,,,,,Total Operating Expenses
+,,,,8700,,,,,,,,,,,Personnel Expenses
+,,,,8710,,,,,,,,,,,Wages
+,,,,8720,,,,,,,,,,,Salaries
+,,,,8730,,,,,,,,,,,Retirement Plan Contributions
+,,,,8740,,,,,,,,,,,Vacation Compensation
+,,,,8750,,,,,,,,,,,Payroll Taxes
+,,,,8790,,,,,,,,,,,Total Personnel Expenses
+,,,,8800,,,,,,,,,,,Depreciation of Fixed Assets
+,,,,8810,,,,,,,,,,,"Depreciation, Buildings"
+,,,,8820,,,,,,,,,,,"Depreciation, Equipment"
+,,,,8830,,,,,,,,,,,"Depreciation, Vehicles"
+,,,,8840,,,,,,,,,,,Gains and Losses
+,,,,8890,,,,,,,,,,,Total Fixed Asset Depreciation
+NATIONAL,,NATIONAL,,8910,,,MISC,,,,,,,,Other Costs of Operations
+,,,,8995,,,,,,,,,,,Net Operating Income
+,,,,9100,,,,,,,,,,,Interest Income
+,,,,9110,,,,,,,,,,,Interest on Bank Balances
+NATIONAL,,NATIONAL,,9120,,,NO VAT,,,,,,,,Finance Charges from Customers
+,,,,9130,,,,,,,,,,,Payment Discounts Received
+,,,,9135,,,,,,,,,,,PmtDisc. Received - Decreases
+NATIONAL,,NATIONAL,,9140,,,NO VAT,,,,,,,,Invoice Rounding
+,,,,9150,,,,,,,,,,,Application Rounding
+,,,,9160,,,,,,,,,,,Payment Tolerance Received
+,,,,9170,,,,,,,,,,,Pmt. Tol. Received Decreases
+,,,,9190,,,,,,,,,,,Total Interest Income
+,,,,9200,,,,,,,,,,,Interest Expenses
+,,,,9210,,,,,,,,,,,Interest on Revolving Credit
+,,,,9220,,,,,,,,,,,Interest on Bank Loans
+,,,,9230,,,,,,,,,,,Mortgage Interest
+,,,,9240,,,,,,,,,,,Finance Charges to Vendors
+,,,,9250,,,,,,,,,,,Payment Discounts Granted
+,,,,9255,,,,,,,,,,,PmtDisc. Granted - Decreases
+,,,,9260,,,,,,,,,,,Payment Tolerance Granted
+,,,,9270,,,,,,,,,,,Pmt. Tol. Granted Decreases
+,,,,9290,,,,,,,,,,,Total Interest Expenses
+,,,,9310,,,,,,,,,,,Unrealized FX Gains
+,,,,9320,,,,,,,,,,,Unrealized FX Losses
+,,,,9330,,,,,,,,,,,Realized FX Gains
+,,,,9340,,,,,,,,,,,Realized FX Losses
+,,,,9395,,,,,,,,,,,NI BEFORE EXTR. ITEMS & TAXES
+,,,,9410,,,,,,,,,,,Extraordinary Income
+,,,,9420,,,,,,,,,,,Extraordinary Expenses
+,,,,9495,,,,,,,,,,,NET INCOME BEFORE TAXES
+,,,,9510,,,,,,,,,,,Corporate Tax
+,,,,9999,,,,,,,,,,,NET INCOME

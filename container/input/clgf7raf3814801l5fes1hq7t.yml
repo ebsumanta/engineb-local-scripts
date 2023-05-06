@@ -1,0 +1,497 @@
+erp_id: clgf7raf3814801l5fes1hq7t
+mappings:
+-   extract: REPORT
+    reports:
+    -   input_files:
+        -   encoding_format: utf-8
+            fields:
+            -   cdm_field_names:
+                - effectiveDate
+                data_type: datetime
+                date_format: dd/mm/yyyy
+                field_name: Posting Date
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Document Type
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Document No.
+                isOpen: false
+                nullable: true
+                required: false
+            -   cdm_field_names:
+                - glAccountNumber
+                data_type: string
+                date_format: ''
+                field_name: G/L Account No.
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names:
+                - jeHeaderDescription
+                data_type: string
+                date_format: ''
+                field_name: Description
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Gen. Posting Type
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Gen. Bus. Posting Group
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Gen. Prod. Posting Group
+                nullable: true
+                required: false
+            -   cdm_field_names:
+                - amount
+                - amountCreditDebitIndicator
+                data_type: currency
+                date_format: ''
+                field_name: Amount
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Bal. Account Type
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Bal. Account No.
+                nullable: true
+                required: false
+            -   cdm_field_names:
+                - transactionId
+                - journalId
+                - journalIdLineNumber
+                data_type: string
+                date_format: ''
+                field_name: Entry No.
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names: []
+                data_type: decimal
+                date_format: ''
+                field_name: Additional-Currency Amount
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Department Code
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: FA Entry No.
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: FA Entry Type
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: G/L Account Name
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: IC Partner Code
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Job No.
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Project Code
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: decimal
+                date_format: ''
+                field_name: Quantity
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Reason Code
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: boolean
+                date_format: ''
+                field_name: Reversed
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Reversed by Entry No.
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Reversed Entry No.
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Source Code
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: User ID
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: currency
+                date_format: ''
+                field_name: VAT Amount
+                nullable: true
+                required: false
+            file_name: General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv
+            mandatory_field_check:
+            -   cdm_field_name: journalId
+                occurrence_count: 1
+            -   cdm_field_name: journalIdLineNumber
+                occurrence_count: 1
+            -   cdm_field_name: jeHeaderDescription
+                occurrence_count: 1
+            -   cdm_field_name: amount
+                occurrence_count: 1
+            -   cdm_field_name: amountCreditDebitIndicator
+                occurrence_count: 1
+            -   cdm_field_name: effectiveDate
+                occurrence_count: 1
+            -   cdm_field_name: glAccountNumber
+                occurrence_count: 1
+            -   cdm_field_name: transactionId
+                occurrence_count: 1
+            template:
+                sheet_name: ''
+                start_row: 1
+        report_type: glDetail
+    -   input_files:
+        -   encoding_format: utf-8
+            fields:
+            -   cdm_field_names:
+                - glAccountNumber
+                data_type: string
+                date_format: ''
+                field_name: No.
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names:
+                - glAccountName
+                data_type: string
+                date_format: ''
+                field_name: Name
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Income/Balance
+                isOpen: false
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Account Type
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Totaling
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Gen. Posting Type
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Gen. Bus. Posting Group
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Gen. Prod. Posting Group
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: decimal
+                date_format: ''
+                field_name: Net Change
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: decimal
+                date_format: ''
+                field_name: Balance
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Cost Type No.
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: decimal
+                date_format: ''
+                field_name: Add.-Currency Balance at Date
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: decimal
+                date_format: ''
+                field_name: Additional-Currency Balance
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: decimal
+                date_format: ''
+                field_name: Additional-Currency Net Change
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: decimal
+                date_format: ''
+                field_name: Balance at Date
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Consol. Credit Acc.
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Consol. Debit Acc.
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Consol. Translation Method
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Default IC Partner G/L Acc. No
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: boolean
+                date_format: ''
+                field_name: Direct Posting
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: VAT Bus. Posting Group
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: VAT Prod. Posting Group
+                nullable: true
+                required: false
+            file_name: Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv
+            mandatory_field_check:
+            -   cdm_field_name: accountSubType
+                occurrence_count: 0
+            -   cdm_field_name: accountType
+                occurrence_count: 0
+            -   cdm_field_name: fsCaption
+                occurrence_count: 0
+            -   cdm_field_name: glAccountDescription
+                occurrence_count: 0
+            -   cdm_field_name: glAccountName
+                occurrence_count: 1
+            -   cdm_field_name: glAccountNumber
+                occurrence_count: 1
+            template:
+                sheet_name: ''
+                start_row: 1
+        report_type: ChartOfAccounts
+    -   input_files:
+        -   encoding_format: utf-8
+            fields:
+            -   cdm_field_names:
+                - glAccountNumber
+                data_type: string
+                date_format: ''
+                field_name: No.
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Name
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: 'Unnamed: 2'
+                nullable: true
+                required: false
+            -   cdm_field_names:
+                - amountBeginning
+                data_type: decimal
+                date_format: ''
+                field_name: Debit
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names:
+                - amountBeginning
+                data_type: decimal
+                date_format: ''
+                field_name: Credit
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names:
+                - amountBeginning
+                - amountEnding
+                data_type: decimal
+                date_format: ''
+                field_name: Debit.1
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names:
+                - amountBeginning
+                - amountEnding
+                data_type: decimal
+                date_format: ''
+                field_name: Credit.1
+                isOpen: false
+                nullable: true
+                required: true
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: 'Unnamed: 7'
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: 'Unnamed: 8'
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: 'Unnamed: 9'
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: 'Unnamed: 10'
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: 'Unnamed: 11'
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: 'Unnamed: 12'
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: 'Unnamed: 13'
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: 'Unnamed: 14'
+                nullable: true
+                required: false
+            -   cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: 'Unnamed: 15'
+                nullable: true
+                required: false
+            file_name: Trial Balance.csv
+            mandatory_field_check:
+            -   cdm_field_name: amountEnding
+                occurrence_count: 2
+            -   cdm_field_name: glAccountNumber
+                occurrence_count: 1
+            -   cdm_field_name: amountBeginning
+                occurrence_count: 4
+            template:
+                exclusion:
+                    aggr: and
+                    rules:
+                    -   column: 2
+                        contains: 'NULL'
+                sheet_name: ''
+                start_row: 9
+        report_type: trialBalance

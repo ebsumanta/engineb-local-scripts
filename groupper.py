@@ -52,6 +52,10 @@ if not is_local:
     # global_group_id = dbutils.widgets.get("group_id")
     # log(f"global_group_id: {global_group_id}")
 
+    # dbutils.widgets.text("ingestion_id", "","")
+    # global_ingestion_id = dbutils.widgets.get("ingestion_id")
+    # log(f"global_group_id: {global_ingestion_id}")
+
     # # container name to access the zip
     # dbutils.widgets.text("containerName", "","")
     # global_container_name = dbutils.widgets.get("containerName")
@@ -77,6 +81,7 @@ else:
     global_storage_account_name='stdemocompanyaccount1 '
     global_storage_url='test'
     graph_ql_url = 'https://app-service-intengb-dev-docker-api.azurewebsites.net/graphql'
+    global_ingestion_id=''
 
 # cmd 5
 def databricks_setup():

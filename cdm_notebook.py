@@ -247,7 +247,8 @@ else:
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))).replace(
         "/notebooks/IntegrationEngine01", ""
     )
-    ingestion_id = "clgw1i8531218301pl901w0wm7"
+    BASE_DIR = '.'
+    ingestion_id = "clgwcb7o22419601plhanzkpeq"
     MAPPING_FILE_NAME = "mapping_file.json"
     dbfs_input_container_path = f"{BASE_DIR}/container/input/"
     dbfs_error_container_path = f"{BASE_DIR}/container/error/"
@@ -256,7 +257,7 @@ else:
     dbfs_gdqs_output_container_path = f"{BASE_DIR}/container/share/gdqs/"
     dbfs_standard_mapping_path = f"{BASE_DIR}/container/input/{MAPPING_FILE_NAME}"
     temp_path = f"{BASE_DIR}/container/temp_output/"
-    clean_outputs()
+    #clean_outputs()
 
 
 # COMMAND ----------
