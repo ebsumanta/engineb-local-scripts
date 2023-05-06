@@ -298,32 +298,44 @@ def process_net(dataframe):
 def process_count(dataframe,column_name,isUnique):
     try:
         # pyspark SQL Like implementation
+        log("Processing count. Creating sql like dataframe for sql count operation")
         dataframe.createOrReplaceTempView("eBData")
+        log("SQL like datafrae created for count")
         count=0
         if not isUnique:
+            log("not unique")
             return spark.sql(f"select count({column_name}) as count from eBData")
         else:
+            log("using distinct as its unique")
             return spark.sql(f"select count( DISTINCT {column_name}) as count from eBData")
+
     except Exception as ex:
         log(f"Exception(process_count): {str(ex)}")
+    finally:
+        log("Exiting count")
 
 def export_processed_df(data,dbfs_path,container_output_path,operation_name,daa_id,order):
     try:
         if local:
+            log("Showing step data as it is local")
             data.show()
         log("Operation completed. Trying to convert to PandasDF")
         pdf = data.toPandas()
         log("PandasDF created. trying to read same file for verification.")
 
         if local:
+            log(f"Execuiting locally. File: {operation_name}_{daa_id}_{order}_data.csv")
             pdf.to_csv(f"{dbfs_path}{operation_name}_{daa_id}_{order}_data.csv",index=False)
         else:
+            log("Execuing export processed dataframe on container")
             pdf.to_csv(f"/dbfs{dbfs_path}{operation_name}_{daa_id}_{order}_data.csv",index=False)
         log("Able to read HDFS exported processed csv using pandas function. Good to export to container")
         log("Exporting the output file to container")
         if local:
+            log("Copying file locally")
             os.system("copy "+f"./{dbfs_path}{daa_id}_{order}_data.csv"+" "+f"{container_output_path}{operation_name}_{daa_id}_{order}_data.csv")
         else:
+            log("Copying files to container")
             # dbutils.fs.cp(f"dbfs:{dbfs_path}{operation_name}_{daa_id}_{order}_data.csv",f"{container_output_path}{operation_name}_{daa_id}_{order}_data.csv",recurse=True)
             pass
     except Exception as ex:
@@ -337,15 +349,19 @@ def export_final_result(data,dbfs_path,daa_id,output_path, export_file_name):
         log("PandasDF created. trying to read same file for verification.")
 
         if local:
+            log("Executing locaaly for exporting")
             pdf.to_csv(f"{dbfs_path}{daa_id}_data.csv",index=False)
         else:
+            log("Executing on Databricks cluster")
             pdf.to_csv(f"/dbfs{dbfs_path}{daa_id}_data.csv",index=False)
         
         log("Able to read HDFS exported processed csv using pandas function. Good to export to container")
         log("Exporting the output file to container")
         if local:
+            log("result export Done locally!")
             os.system("copy "+f"./{dbfs_path}{daa_id}_data.csv"+" "+f"{output_path}{export_file_name}")
         else:
+            log("Result export done on databricks")
             # dbutils.fs.cp(f"dbfs:{dbfs_path}{daa_id}_data.csv",f"{output_path}{export_file_name}",recurse=True)
             pass
     except Exception as ex:
@@ -445,6 +461,7 @@ def main():
         #dbutils.fs.cp(f'dbfs:{global_data_config["DBFS_PATH"]}log.json',f'{global_data_config["OUTPUT_CONTAINER_PATH"]}log_{str(datetime.now()).replace(" ","_")}.json',recurse=True)
             
             
+
 main()
 log(f"Execution time: {str(time.time() - start_time)}")
 print(global_log)
