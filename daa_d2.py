@@ -212,8 +212,6 @@ def read_content():
         log(f"exception(read-content): {str(ex)}")
         raise Exception("Unable to read content")
 
-
-
 # all the operation function
 def process_filter(column_name,condition,input_data,df):
     log(f"column_name: {column_name} | condition: {condition} | input_data: {input_data}")
@@ -398,7 +396,28 @@ def export_final_result(data,dbfs_path,daa_id,output_path, export_file_name):
 
 def update_process_status(daa_id,order,status):
     try:
-        pass
+        path=path[1:]
+        log(f"graphQL Path variable data: {path}")
+        url = os.getenv('STATUS_UPDATE_URL', 'http://localhost:7072/graphql')
+        log(f"GraphQL URL: {url}")
+        if local:
+            pass
+        else:
+            request_body = {
+                "query": "mutation UpdateOperationLog($status: String, $updateOperationLogId: String) {updateOperationLog(status: $status, id: $updateOperationLogId) {name}}",
+                "variables":{
+                    "status": status,
+                    "updateOperationLogId": analytics_id
+                }
+            }
+            print(request_body)
+            response = requests.post(url, data = json.dumps(request_body), headers = {'Content-Type': 'application/json'})
+            if response.status_code == 200:
+                print(response.status_code)
+                log('GraphQL: Job Status Updated')
+            else:
+                print(response.status_code)
+                log('GraphQL: Could not update Job Status')
     except Exception as ex:
         log(f"Exception(update_process_status): {str(ex)}")
 
@@ -509,7 +528,7 @@ def main():
         #dbutils.fs.cp(f'dbfs:{global_data_config["DBFS_PATH"]}log.json',f'{global_data_config["OUTPUT_CONTAINER_PATH"]}log_{str(datetime.now()).replace(" ","_")}.json',recurse=True)
             
             
-
-main()
-log(f"Execution time: {str(time.time() - start_time)}")
-print(global_log)
+if __name__ == '__main__':
+    main()
+    log(f"Execution time: {str(time.time() - start_time)}")
+    print(global_log)
