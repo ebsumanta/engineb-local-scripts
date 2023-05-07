@@ -341,6 +341,34 @@ def export_processed_df(data,dbfs_path,container_output_path,operation_name,daa_
     except Exception as ex:
         log(f"Exception(export_processed_df): {str(ex)}")
 
+def export_processed_df_to_json(data,dbfs_path,container_output_path,operation_name,daa_id,order):
+    try:
+        result_df = data.limit(10)
+        dict_rows = [row.asDict(True) for row in result_df.collect()]
+        json_object_tmp = json.dumps({"data": dict_rows}, indent=4)
+            
+        log("temp json created for export")
+
+        if not local:
+            with open(f"/dbfs{dbfs_path}tmp_{operation_name}_{daa_id}_{order}.json", "w") as outfile:
+                outfile.write(json_object_tmp)
+        else:
+                with open(f"./{dbfs_path}tmp_{operation_name}_{daa_id}_{order}.json", "w") as outfile:
+                    outfile.write(json_object_tmp)
+        
+        log("Json is created at HDFS. preparing for Container export")
+
+        if local:
+            os.system("copy "+f"{dbfs_path}tmp_{operation_name}_{daa_id}_{order}.json"+" "+f'{container_output_path}tmp_{operation_name}_{daa_id}_{order}.json')
+        else:
+            # dbutils.fs.cp(
+            #     f'dbfs:{dbfs_path}tmp_{daa_id}_{order}.json',
+            #     f'{container_output_path}tmp_{operation_name}_{daa_id}_{order}.json',
+            #     recurse=True)
+            pass
+    except Exception as ex:
+        log(f"Error(export_processed_df_to_json): {str(ex)}")
+
 def export_final_result(data,dbfs_path,daa_id,output_path, export_file_name):
     try:
         # data.show()
@@ -366,6 +394,13 @@ def export_final_result(data,dbfs_path,daa_id,output_path, export_file_name):
             pass
     except Exception as ex:
         log(f"Error(export_final_result): {str(ex)}")
+
+
+def update_process_status(daa_id,order,status):
+    try:
+        pass
+    except Exception as ex:
+        log(f"Exception(update_process_status): {str(ex)}")
 
 def main():
     try:
@@ -405,6 +440,19 @@ def main():
                 operation_type,
                 global_analytics_id,
                 order
+            )
+            export_processed_df_to_json(
+                opx_dataframe,
+                global_data_config['DBFS_PATH'],
+                global_data_config['OUTPUT_CONTAINER_PATH'],
+                operation_type,
+                global_analytics_id,
+                order
+            )
+            update_process_status(
+                global_analytics_id,
+                order,
+                'SUCCESS'
             )
         # prepare data for 1st 10 rows to export as json
         try:
