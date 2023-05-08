@@ -1,1 +1,1239 @@
-{"cdm_fields": [{"map_type": "dummy", "cdm_field": "approvedDateTime", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "datetime", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "fiscalYear", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "enteredDateTime", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "datetime", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "period", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "reportingAmountCurrency", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"erp_fields": [{"id": 128574358906048, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Reversed by Entry No.", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true, "order": 1}, {"id": 128574358911888, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Reversed Entry No.", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true, "order": 2}], "cdm_field": "reversalJournalId", "map_type": "calculated", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "operation": "CONCAT", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT", "sign_fields": [], "expression": ""}, {"cdm_field": "segment01", "erp_fields": [{"id": 128574357102064, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Project Code", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "map_type": "direct", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "jeLineDescription", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "direct", "cdm_field": "journalId", "erp_fields": [{"id": 128574357098096, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Entry No.", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": true, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"erp_fields": [{"id": 128574357098096, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Entry No.", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true, "order": 1}], "cdm_field": "journalIdLineNumber", "map_type": "calculated", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "operation": "Journal Line Number", "mandatory": true, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT", "sign_fields": [], "expression": ""}, {"map_type": "dummy", "cdm_field": "lastModifiedBy", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "direct", "cdm_field": "transactionId", "erp_fields": [{"id": 128574357098096, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Entry No.", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": true, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"erp_fields": [{"id": 128574357106672, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Posting Date", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "cdm_field": "effectiveDate", "map_type": "date-mask", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "datetime", "operation": "Date Mask", "mandatory": true, "erp_Id": "clgw917g41968401plo3nw41ux", "extract_type": "REPORT", "sign_fields": [], "expression": "", "date_format": "%d/%m/%Y", "date_format_text": "%d/%m/%Y"}, {"cdm_field": "businessUnitCode", "erp_fields": [{"id": 128574357103856, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Department Code", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "map_type": "direct", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "enteredBy", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "journalEntryType", "erp_fields": [{"id": 128574358907728, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Gen. Posting Type", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "map_type": "direct", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "reversalIndicator", "erp_fields": [{"id": 128574357104432, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Reversed", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "map_type": "direct", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "direct", "cdm_field": "jeHeaderDescription", "erp_fields": [{"id": 128574357101808, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Description", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": true, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "userDefined2", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "userDefined1", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "approvedBy", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"erp_fields": [{"id": 128574357109680, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Amount", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true, "order": 1}], "cdm_field": "amount", "map_type": "calculated", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "decimal", "operation": "ABS", "mandatory": true, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT", "sign_fields": [], "expression": ""}, {"erp_fields": [{"id": 128574357109680, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Amount", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true, "order": 1}], "cdm_field": "amountCreditDebitIndicator", "map_type": "calculated", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "operation": "DCI1", "mandatory": true, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT", "sign_fields": [], "expression": ""}, {"map_type": "dummy", "cdm_field": "amountCurrency", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "lastModifiedDate", "erp_fields": [], "report_type": "glDetail", "data_type": "datetime", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "segment05", "erp_fields": [], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "sourceId", "erp_fields": [{"id": 128574357097712, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Source Code", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "map_type": "direct", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"erp_fields": [{"id": 128574358911328, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Additional-Currency Amount", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true, "order": 1}], "cdm_field": "localAmount", "map_type": "calculated", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "decimal", "operation": "ABS", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT", "sign_fields": [], "expression": ""}, {"map_type": "dummy", "cdm_field": "localAmountCurrency", "erp_fields": [], "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "tags", "erp_fields": [], "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "taxCode", "erp_fields": [], "map_type": "dummy", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "reportingAmount", "erp_fields": [], "report_type": "glDetail", "data_type": "decimal", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "segment02", "erp_fields": [{"id": 128574358897728, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Gen. Prod. Posting Group", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "map_type": "direct", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "segment03", "erp_fields": [{"id": 128574358908848, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Gen. Bus. Posting Group", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "map_type": "direct", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "segment04", "erp_fields": [{"id": 128574357106032, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "Job No.", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "map_type": "direct", "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "direct", "cdm_field": "glAccountNumber", "erp_fields": [{"id": 128574357097648, "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "field_name": "G/L Account No.", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv", "report_type": "glDetail", "data_type": "string", "mandatory": true, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "glAccountName", "erp_fields": [{"id": 128574358444848, "file_name": "trialBalance_Trial Balance.csv", "field_name": "Name", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "map_type": "direct", "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "balanceAsOfDate", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "datetime", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "fiscalYear", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "direct", "cdm_field": "glAccountNumber", "erp_fields": [{"id": 128574358443248, "file_name": "trialBalance_Trial Balance.csv", "field_name": "No.", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "string", "mandatory": true, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "period", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "segment02", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "segment03", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "segment01", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "amountLocalCurrency", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "amountReportingCurrency", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "segment04", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "segment05", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "amountEndingReporting", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "decimal", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "amountBeginningLocal", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "decimal", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "amountBeginningReporting", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "decimal", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "amountCurrency", "erp_fields": [], "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"erp_fields": [{"id": 128574358449136, "file_name": "trialBalance_Trial Balance.csv", "field_name": "Debit.1", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true, "order": 1}, {"id": 128574358438832, "file_name": "trialBalance_Trial Balance.csv", "field_name": "Credit.1", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true, "order": 2}], "cdm_field": "amountEnding", "map_type": "calculated", "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "decimal", "operation": "MC", "mandatory": true, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT", "sign_fields": [{"order": 1, "title": "Subtract", "value": "-"}], "expression": "<1> - <2>"}, {"map_type": "dummy", "cdm_field": "amountEndingLocal", "erp_fields": [], "report_type": "trialBalance", "data_type": "decimal", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"erp_fields": [{"id": 128574358449136, "file_name": "trialBalance_Trial Balance.csv", "field_name": "Debit.1", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true, "order": 1}, {"id": 128574358438832, "file_name": "trialBalance_Trial Balance.csv", "field_name": "Credit.1", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true, "order": 2}, {"id": 128574358444400, "file_name": "trialBalance_Trial Balance.csv", "field_name": "Debit", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true, "order": 3}, {"id": 128574358443632, "file_name": "trialBalance_Trial Balance.csv", "field_name": "Credit", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true, "order": 4}], "cdm_field": "amountBeginning", "map_type": "calculated", "file_name": "trialBalance_Trial Balance.csv", "report_type": "trialBalance", "data_type": "decimal", "operation": "MC", "mandatory": true, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT", "sign_fields": [{"order": 1, "title": "Subtract", "value": "-"}, {"order": 2, "title": "Subtract", "value": "-"}, {"order": 3, "title": "Add", "value": "+"}], "expression": "<1> - <2> - <3> + <4>"}, {"map_type": "dummy", "cdm_field": "budgetFlag", "erp_fields": [], "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "businessUnitCode", "erp_fields": [], "report_type": "trialBalance", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "segment03", "erp_fields": [{"id": 128574355740096, "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "field_name": "Gen. Bus. Posting Group", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "map_type": "direct", "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "segment04", "erp_fields": [], "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "segment05", "erp_fields": [{"id": 128574355749456, "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "field_name": "VAT Bus. Posting Group", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "map_type": "direct", "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "fsCaption", "erp_fields": [], "map_type": "dummy", "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgw917g41968401plo3nw41ux", "extract_type": "REPORT"}, {"map_type": "direct", "cdm_field": "glAccountNumber", "erp_fields": [{"id": 128574525874480, "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "field_name": "No.", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": true, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "parentGlAccountNumber", "erp_fields": [], "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "segment01", "erp_fields": [], "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "segment02", "erp_fields": [{"id": 128574355734576, "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "field_name": "Gen. Prod. Posting Group", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "map_type": "direct", "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "chartOfAccountType", "erp_fields": [], "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "accountSubType", "erp_fields": [], "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"cdm_field": "accountType", "erp_fields": [], "map_type": "dummy", "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgw917g41968401plo3nw41ux", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "businessUnitCode", "erp_fields": [], "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "glAccountDescription", "erp_fields": [], "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "controllingIntegration", "erp_fields": [], "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "dummy", "cdm_field": "consolidationGroupChartOfAccounts", "erp_fields": [], "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": false, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}, {"map_type": "direct", "cdm_field": "glAccountName", "erp_fields": [{"id": 128574525875184, "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "field_name": "Name", "consider_valid": true, "null_check_valid": true, "null_check_comment": "Null values allowed", "type_check_valid": true, "type_check_comment": "All rows have valid data.", "valid": true}], "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv", "report_type": "ChartOfAccounts", "data_type": "string", "mandatory": true, "erp_Id": "clgf7raf3814801l5fes1hq7t", "extract_type": "REPORT"}]}
+{
+    "cdm_fields": [
+        {
+            "map_type": "dummy",
+            "cdm_field": "approvedDateTime",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "datetime",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "fiscalYear",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "enteredDateTime",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "datetime",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "period",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "reportingAmountCurrency",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "erp_fields": [
+                {
+                    "id": 128574358906048,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Reversed by Entry No.",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "order": 1
+                },
+                {
+                    "id": 128574358911888,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Reversed Entry No.",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "order": 2
+                }
+            ],
+            "cdm_field": "reversalJournalId",
+            "map_type": "calculated",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "operation": "CONCAT",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT",
+            "sign_fields": [],
+            "expression": ""
+        },
+        {
+            "cdm_field": "segment01",
+            "erp_fields": [
+                {
+                    "id": 128574357102064,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Project Code",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "map_type": "direct",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "jeLineDescription",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "direct",
+            "cdm_field": "journalId",
+            "erp_fields": [
+                {
+                    "id": 128574357098096,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Entry No.",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": true,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "erp_fields": [
+                {
+                    "id": 128574357098096,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Entry No.",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "order": 1
+                }
+            ],
+            "cdm_field": "journalIdLineNumber",
+            "map_type": "calculated",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "operation": "Journal Line Number",
+            "mandatory": true,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT",
+            "sign_fields": [],
+            "expression": ""
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "lastModifiedBy",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "direct",
+            "cdm_field": "transactionId",
+            "erp_fields": [
+                {
+                    "id": 128574357098096,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Entry No.",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": true,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "erp_fields": [
+                {
+                    "id": 128574357106672,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Posting Date",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "cdm_field": "effectiveDate",
+            "map_type": "date-mask",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "datetime",
+            "operation": "Date Mask",
+            "mandatory": true,
+            "erp_Id": "clgw917g41968401plo3nw41ux",
+            "extract_type": "REPORT",
+            "sign_fields": [],
+            "expression": "",
+            "date_format": "%d/%m/%Y",
+            "date_format_text": "%d/%m/%Y"
+        },
+        {
+            "cdm_field": "businessUnitCode",
+            "erp_fields": [
+                {
+                    "id": 128574357103856,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Department Code",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "map_type": "direct",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "enteredBy",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "journalEntryType",
+            "erp_fields": [
+                {
+                    "id": 128574358907728,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Gen. Posting Type",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "map_type": "direct",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "reversalIndicator",
+            "erp_fields": [
+                {
+                    "id": 128574357104432,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Reversed",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "map_type": "direct",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "direct",
+            "cdm_field": "jeHeaderDescription",
+            "erp_fields": [
+                {
+                    "id": 128574357101808,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Description",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": true,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "userDefined2",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "userDefined1",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "approvedBy",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "erp_fields": [
+                {
+                    "id": 128574357109680,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Amount",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "order": 1
+                }
+            ],
+            "cdm_field": "amount",
+            "map_type": "calculated",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "decimal",
+            "operation": "ABS",
+            "mandatory": true,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT",
+            "sign_fields": [],
+            "expression": ""
+        },
+        {
+            "erp_fields": [
+                {
+                    "id": 128574357109680,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Amount",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "order": 1
+                }
+            ],
+            "cdm_field": "amountCreditDebitIndicator",
+            "map_type": "calculated",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "operation": "DCI1",
+            "mandatory": true,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT",
+            "sign_fields": [],
+            "expression": ""
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountCurrency",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "lastModifiedDate",
+            "erp_fields": [],
+            "report_type": "glDetail",
+            "data_type": "datetime",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "segment05",
+            "erp_fields": [],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "sourceId",
+            "erp_fields": [
+                {
+                    "id": 128574357097712,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Source Code",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "map_type": "direct",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "erp_fields": [
+                {
+                    "id": 128574358911328,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Additional-Currency Amount",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "order": 1
+                }
+            ],
+            "cdm_field": "localAmount",
+            "map_type": "calculated",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "decimal",
+            "operation": "ABS",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT",
+            "sign_fields": [],
+            "expression": ""
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "localAmountCurrency",
+            "erp_fields": [],
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "tags",
+            "erp_fields": [],
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "taxCode",
+            "erp_fields": [],
+            "map_type": "dummy",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "reportingAmount",
+            "erp_fields": [],
+            "report_type": "glDetail",
+            "data_type": "decimal",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "segment02",
+            "erp_fields": [
+                {
+                    "id": 128574358897728,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Gen. Prod. Posting Group",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "map_type": "direct",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "segment03",
+            "erp_fields": [
+                {
+                    "id": 128574358908848,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Gen. Bus. Posting Group",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "map_type": "direct",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "segment04",
+            "erp_fields": [
+                {
+                    "id": 128574357106032,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "Job No.",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "map_type": "direct",
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "direct",
+            "cdm_field": "glAccountNumber",
+            "erp_fields": [
+                {
+                    "id": 128574357097648,
+                    "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+                    "field_name": "G/L Account No.",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "file_name": "glDetail_General Ledger Entries VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_53.csv",
+            "report_type": "glDetail",
+            "data_type": "string",
+            "mandatory": true,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "glAccountName",
+            "erp_fields": [
+                {
+                    "id": 128574358444848,
+                    "file_name": "trialBalance_Trial Balance.csv",
+                    "field_name": "Name",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "map_type": "direct",
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "balanceAsOfDate",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "datetime",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "fiscalYear",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "direct",
+            "cdm_field": "glAccountNumber",
+            "erp_fields": [
+                {
+                    "id": 128574358443248,
+                    "file_name": "trialBalance_Trial Balance.csv",
+                    "field_name": "No.",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": true,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "period",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "segment02",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "segment03",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "segment01",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountLocalCurrency",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountReportingCurrency",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "segment04",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "segment05",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountEndingReporting",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "decimal",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountBeginningLocal",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "decimal",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountBeginningReporting",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "decimal",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountCurrency",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "erp_fields": [
+                {
+                    "id": 128574358449136,
+                    "file_name": "trialBalance_Trial Balance.csv",
+                    "field_name": "Debit.1",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "order": 1
+                },
+                {
+                    "id": 128574358438832,
+                    "file_name": "trialBalance_Trial Balance.csv",
+                    "field_name": "Credit.1",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "order": 2
+                }
+            ],
+            "cdm_field": "amountEnding",
+            "map_type": "calculated",
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "decimal",
+            "operation": "MC",
+            "mandatory": true,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT",
+            "sign_fields": [
+                {
+                    "order": 1,
+                    "title": "Subtract",
+                    "value": "-"
+                }
+            ],
+            "expression": "<1> - <2>"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountEndingLocal",
+            "erp_fields": [],
+            "report_type": "trialBalance",
+            "data_type": "decimal",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "erp_fields": [
+                {
+                    "id": 128574358449136,
+                    "file_name": "trialBalance_Trial Balance.csv",
+                    "field_name": "Debit.1",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "order": 1
+                },
+                {
+                    "id": 128574358438832,
+                    "file_name": "trialBalance_Trial Balance.csv",
+                    "field_name": "Credit.1",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "order": 2
+                },
+                {
+                    "id": 128574358444400,
+                    "file_name": "trialBalance_Trial Balance.csv",
+                    "field_name": "Debit",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "order": 3
+                },
+                {
+                    "id": 128574358443632,
+                    "file_name": "trialBalance_Trial Balance.csv",
+                    "field_name": "Credit",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "order": 4
+                }
+            ],
+            "cdm_field": "amountBeginning",
+            "map_type": "calculated",
+            "file_name": "trialBalance_Trial Balance.csv",
+            "report_type": "trialBalance",
+            "data_type": "decimal",
+            "operation": "MC",
+            "mandatory": true,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT",
+            "sign_fields": [
+                {
+                    "order": 1,
+                    "title": "Subtract",
+                    "value": "-"
+                },
+                {
+                    "order": 2,
+                    "title": "Subtract",
+                    "value": "-"
+                },
+                {
+                    "order": 3,
+                    "title": "Add",
+                    "value": "+"
+                }
+            ],
+            "expression": "<1> - <2> - <3> + <4>"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "budgetFlag",
+            "erp_fields": [],
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "businessUnitCode",
+            "erp_fields": [],
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "segment03",
+            "erp_fields": [
+                {
+                    "id": 128574355740096,
+                    "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+                    "field_name": "Gen. Bus. Posting Group",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "map_type": "direct",
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "segment04",
+            "erp_fields": [],
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "segment05",
+            "erp_fields": [
+                {
+                    "id": 128574355749456,
+                    "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+                    "field_name": "VAT Bus. Posting Group",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "map_type": "direct",
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "fsCaption",
+            "erp_fields": [],
+            "map_type": "dummy",
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgw917g41968401plo3nw41ux",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "direct",
+            "cdm_field": "glAccountNumber",
+            "erp_fields": [
+                {
+                    "id": 128574525874480,
+                    "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+                    "field_name": "No.",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": true,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "parentGlAccountNumber",
+            "erp_fields": [],
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "segment01",
+            "erp_fields": [],
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "segment02",
+            "erp_fields": [
+                {
+                    "id": 128574355734576,
+                    "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+                    "field_name": "Gen. Prod. Posting Group",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "map_type": "direct",
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "chartOfAccountType",
+            "erp_fields": [],
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "accountSubType",
+            "erp_fields": [],
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "cdm_field": "accountType",
+            "erp_fields": [],
+            "map_type": "dummy",
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgw917g41968401plo3nw41ux",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "businessUnitCode",
+            "erp_fields": [],
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "glAccountDescription",
+            "erp_fields": [],
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "controllingIntegration",
+            "erp_fields": [],
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "consolidationGroupChartOfAccounts",
+            "erp_fields": [],
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "direct",
+            "cdm_field": "glAccountName",
+            "erp_fields": [
+                {
+                    "id": 128574525875184,
+                    "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+                    "field_name": "Name",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "file_name": "ChartOfAccounts_Chart of Accounts VM-MD365NAV2015_NAV2015USER 2022-11-09T11_34_11.csv",
+            "report_type": "ChartOfAccounts",
+            "data_type": "string",
+            "mandatory": true,
+            "erp_Id": "clgf7raf3814801l5fes1hq7t",
+            "extract_type": "REPORT"
+        }
+    ]
+}

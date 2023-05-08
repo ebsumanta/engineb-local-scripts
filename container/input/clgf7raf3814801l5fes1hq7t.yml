@@ -488,10 +488,12 @@ mappings:
                 occurrence_count: 4
             template:
                 exclusion:
-                    aggr: and
+                    aggr: or
                     rules:
                     -   column: 2
-                        contains: 'NULL'
+                        contains: '  Fixed Assets'
+                    -   column: 3
+                        contains: '    Tangible Fixed Assets'
                 sheet_name: ''
                 start_row: 9
         report_type: trialBalance

@@ -712,6 +712,7 @@ def apply_column_operation(row, operator, total_columns):
 
 def apply_row_exlcusion(data, exclusion):
     try:
+        print("Data columsn: ", data.columns)
         exclusion_values = list()
         rules = exclusion["rules"]
         operation = exclusion["aggr"] if len(rules) > 1 else "or"
@@ -737,6 +738,9 @@ def apply_row_exlcusion(data, exclusion):
             else x[0],
             axis=1,
         )
+        print((data[~rows_to_exclude].reset_index(drop=True)).columns)
+        print(data.columns)
+
         return data[~rows_to_exclude].reset_index(drop=True)
     except CDMConversionException as cdm_e:
         error_info = json.loads(str(cdm_e))

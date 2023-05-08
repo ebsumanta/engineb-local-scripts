@@ -393,7 +393,6 @@ def export_final_result(data,dbfs_path,daa_id,output_path, export_file_name):
     except Exception as ex:
         log(f"Error(export_final_result): {str(ex)}")
 
-
 def update_process_status(daa_id,order,status):
     try:
         path=path[1:]
@@ -424,14 +423,28 @@ def update_process_status(daa_id,order,status):
 def main():
     try:
         data = read_content()
+        dataframe_container = dict()
+
         for operation in global_data_config['config']['operation']:
             # for each operation , process its filters
             operation_type = operation['operation_type']
-            temp_data = data
-            order = operation['order']
+            
+            if operation['source'] != "" or operation['source'] != " " or operation['source'] != None:
+                if operation['source'] != "" and operation['order'] == 1:
+                    log("Order 1 should always take original dataframe")
+                    raise Exception("")
+                else:
+                    temp_data = dataframe_container[str(operation['source'])]
+            else:
+                temp_data = data
+                dataframe_container[str(operation['order'])] = data
 
+            order = operation['order']
             temp_dfs = []
             
+
+            
+
             for condition in operation['conditions']:
                 if operation_type == 'Filter':
                     try:
@@ -473,38 +486,8 @@ def main():
                 order,
                 'SUCCESS'
             )
-        # prepare data for 1st 10 rows to export as json
-        try:
-            log("Preparing top 10 resulted rows for json export")
-            
-            result_df = data.limit(10)
-            dict_rows = [row.asDict(True) for row in result_df.collect()]
-            json_object_tmp = json.dumps({"data": dict_rows}, indent=4)
-            
-            log("temp json created for export")
-
-            if not local:
-                with open(f"/dbfs{global_data_config['DBFS_PATH']}tmp_{global_analytics_id}.json", "w") as outfile:
-                    outfile.write(json_object_tmp)
-            else:
-                 with open(f"./{global_data_config['DBFS_PATH']}tmp_{global_analytics_id}.json", "w") as outfile:
-                    outfile.write(json_object_tmp)
-            
-            log("Json is created at HDFS. preparing for Container export")
-
-            if local:
-                os.system("copy "+f"{global_data_config['DBFS_PATH']}tmp_{global_analytics_id}.json"+" "+f'{global_data_config["OUTPUT_CONTAINER_PATH"]}tmp_{opx}_{global_analytics_id}.json')
-            else:
-                # dbutils.fs.cp(
-                #     f'dbfs:{global_data_config["DBFS_PATH"]}tmp_{global_analytics_id}.json',
-                #     f'{global_data_config["OUTPUT_CONTAINER_PATH"]}tmp_{global_analytics_id}.json',
-                #     recurse=True)
-                pass
-            log(f"JSON file exported to container. Export File name: tmp_{global_analytics_id}.json")
-        except Exception as exx:
-            log(f"Exception while generating json file: {str(exx)}")
-
-            
+        # prepare data for export in final 
+        
         log("Exported to container")
         dispatch_response_graphql("COMPLETED",global_analytics_id,global_data_config['OUTPUT_CONTAINER_PATH'])
         
