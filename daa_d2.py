@@ -53,15 +53,17 @@ def log(msg):
         print(msg)
     global_log.append(msg)
 
+# cmd 5
 def display_log():
     for item in global_log:
         print(item,'\n\n')
 
+# cmd 6
 def check_and_create_directory(directory_path):
     if not os.path.exists(directory_path):
         os.makedirs(directory_path)
 
-
+# cmd 7
 def databricks_setup_local():
     log("Creating local execution container")
     STORAGE_URL = 'daa'
@@ -100,7 +102,7 @@ def databricks_setup_local():
         "UNZIPED_DIR": UNZIPED_DIR
     }
 
-
+# cmd 8
 # def databricks_setup():
 #     try:
 #         # data-ingestions / clg0h8yx50064h10l2x2eksgw / share / zip
@@ -160,7 +162,7 @@ def databricks_setup_local():
 #         raise Exception("Error(databricks_setup): ", str(ex))
 
 
-
+# cmd 9
 def dispatch_response_graphql(status, analytics_id, path=''):
     path=path[1:]
     log(f"graphQL Path variable data: {path}")
@@ -198,6 +200,8 @@ start_time = time.time()
 spark = SparkSession.builder.appName('DAAv1.5').getOrCreate()
 log(f"PySpark Session created in {str(time.time() - start_time)}")
 
+
+# cmd 10
 def read_content():
     try:
         # file path example: data-ingestions/{clfqy13lt066501p8b3y6ra0v}/share/zip/cdm.zip
@@ -212,6 +216,7 @@ def read_content():
         log(f"exception(read-content): {str(ex)}")
         raise Exception("Unable to read content")
 
+# cmd 11
 # all the operation function
 def process_filter(column_name,condition,input_data,df):
     log(f"column_name: {column_name} | condition: {condition} | input_data: {input_data}")
@@ -272,6 +277,7 @@ def process_filter(column_name,condition,input_data,df):
         log("greater than equal to filter triggred")
         return filter_gte(column_name,float(input_data),df)
 
+# cmd 12
 def process_net(dataframe):
     try:
         total_debit_amount=0
@@ -293,6 +299,7 @@ def process_net(dataframe):
     except Exception as ex:
         log(f"{str(ex)}")
 
+# cmd 13
 def process_count(dataframe,column_name,isUnique):
     try:
         # pyspark SQL Like implementation
@@ -312,6 +319,7 @@ def process_count(dataframe,column_name,isUnique):
     finally:
         log("Exiting count")
 
+# cmd14
 def export_processed_df(data,dbfs_path,container_output_path,operation_name,daa_id,order):
     try:
         if local:
@@ -339,6 +347,7 @@ def export_processed_df(data,dbfs_path,container_output_path,operation_name,daa_
     except Exception as ex:
         log(f"Exception(export_processed_df): {str(ex)}")
 
+# cmd 15
 def export_processed_df_to_json(data,dbfs_path,container_output_path,operation_name,daa_id,order):
     try:
         result_df = data.limit(10)
@@ -367,6 +376,7 @@ def export_processed_df_to_json(data,dbfs_path,container_output_path,operation_n
     except Exception as ex:
         log(f"Error(export_processed_df_to_json): {str(ex)}")
 
+# cmd 16
 def export_final_result(data,dbfs_path,daa_id,output_path, export_file_name):
     try:
         # data.show()
@@ -393,6 +403,7 @@ def export_final_result(data,dbfs_path,daa_id,output_path, export_file_name):
     except Exception as ex:
         log(f"Error(export_final_result): {str(ex)}")
 
+# cmd 17
 def update_process_status(daa_id,order,status):
     try:
         path=path[1:]
@@ -420,6 +431,7 @@ def update_process_status(daa_id,order,status):
     except Exception as ex:
         log(f"Exception(update_process_status): {str(ex)}")
 
+# cmd 18
 def main():
     try:
         data = read_content()
@@ -510,7 +522,7 @@ def main():
             outfile.write(json_object)
         #dbutils.fs.cp(f'dbfs:{global_data_config["DBFS_PATH"]}log.json',f'{global_data_config["OUTPUT_CONTAINER_PATH"]}log_{str(datetime.now()).replace(" ","_")}.json',recurse=True)
             
-            
+    
 if __name__ == '__main__':
     main()
     log(f"Execution time: {str(time.time() - start_time)}")
