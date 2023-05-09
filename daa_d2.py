@@ -436,17 +436,18 @@ def main():
     try:
         data = read_content()
         dataframe_container = dict()
-
+        print(global_data_config['config'])
         for operation in global_data_config['config']['operation']:
+            print(operation)
             # for each operation , process its filters
             operation_type = operation['operation_type']
             
-            if operation['source'] != "" or operation['source'] != " " or operation['source'] != None:
-                if operation['source'] != "" and operation['order'] == 1:
+            if global_data_config['config']['source'] != "" and global_data_config['config']['source'] != " " and global_data_config['config']['source'] != None:
+                if global_data_config['config']['source'] != "" and operation['order'] == 1:
                     log("Order 1 should always take original dataframe")
                     raise Exception("")
                 else:
-                    temp_data = dataframe_container[str(operation['source'])]
+                    temp_data = dataframe_container[str(operation['order'])]
             else:
                 temp_data = data
                 dataframe_container[str(operation['order'])] = data
@@ -498,6 +499,7 @@ def main():
                 order,
                 'SUCCESS'
             )
+        print(dataframe_container.keys())
         # prepare data for export in final 
         
         log("Exported to container")

@@ -2,6 +2,7 @@
     "export_file_name": "Test.csv",
     "file_container_path": "data-ingestions/clgummed8363701rxq2jjxbak/share/zip/cdm.zip",
     "file_name": "glDetail.csv",
+    "source": "",
     "column_name": [
         "amount",
         "amountCreditDebitIndicator",
