@@ -312,7 +312,6 @@ def graphql_request(req_body):
         error_info = json.dumps(error_data)
         raise CDMConversionException(error_info)
 
-
 def fetch_groupings():
     try:
         req_body = {
@@ -342,8 +341,6 @@ def fetch_groupings():
         }
         error_info = json.dumps(error_data)
         raise CDMConversionException(error_info)
-
-
 
 def send_job_status(status):
     try:
@@ -397,8 +394,6 @@ def adjust_filepath(filepath):
         error_info = json.dumps(error_data)
         raise CDMConversionException(error_info)
 
-
-
 def read_erp_config_file(filepath):
     try:
         with open(adjust_filepath(filepath), "r") as f:
@@ -413,9 +408,6 @@ def read_erp_config_file(filepath):
         }
         error_info = json.dumps(error_data)
         raise CDMConversionException(error_info)
-
-
-
 
 def read_mapping_file():
     """Reads the mapping file and returns the mapping"""
@@ -434,8 +426,6 @@ def read_mapping_file():
         }
         error_info = json.dumps(error_data)
         raise CDMConversionException(error_info)
-
-
 
 def retrive_unique_fields(fields):
     try:
@@ -456,7 +446,6 @@ def retrive_unique_fields(fields):
         }
         error_info = json.dumps(error_data)
         raise CDMConversionException(error_info)
-
 
 def retrive_report_names(mapping):
     try:
@@ -490,10 +479,6 @@ def remove_all_null_rows(df):
         error_info = json.dumps(error_data)
         raise CDMConversionException(error_info)
 
-
-# COMMAND ----------
-
-# Test file encoding - by Sumanta (Test Mode)
 def get_encoders():
     return [
         "utf-8",
@@ -506,8 +491,6 @@ def get_encoders():
         "eucjp",
         "iso-8859-9",
     ]
-
-
 
 # TODO: do we still need this dataframe creator ?
 def dataframe_creator(content, skiprows=0, nrows=0):
@@ -577,7 +560,7 @@ def dataframe_creator(content, skiprows=0, nrows=0):
         error_info = json.dumps(error_data)
         raise CDMConversionException(error_info)
 
-
+# TODO: pyspark dataframe extractor
 def fetch_csv_data(file_path, encoding="utf-8", start_row=0):
     try:
         data = None
