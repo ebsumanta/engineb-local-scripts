@@ -2,178 +2,7 @@
     "cdm_fields": [
         {
             "map_type": "dummy",
-            "cdm_field": "amountLocalCurrency",
-            "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "string",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "dummy",
-            "cdm_field": "period",
-            "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "string",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "direct",
-            "cdm_field": "glAccountNumber",
-            "erp_fields": [
-                {
-                    "id": 138157460290096,
-                    "file_name": "trialBalance_Trial Balance Report.csv",
-                    "field_name": "Account",
-                    "consider_valid": true,
-                    "null_check_valid": true,
-                    "null_check_comment": "Null values allowed",
-                    "type_check_valid": true,
-                    "type_check_comment": "All rows have valid data.",
-                    "valid": true
-                }
-            ],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "string",
-            "mandatory": true,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "dummy",
-            "cdm_field": "amountEndingLocal",
-            "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "decimal",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "dummy",
-            "cdm_field": "amountCurrency",
-            "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "string",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "dummy",
-            "cdm_field": "balanceAsOfDate",
-            "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "datetime",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "dummy",
-            "cdm_field": "amountReportingCurrency",
-            "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "string",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "dummy",
-            "cdm_field": "amountEndingReporting",
-            "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "decimal",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "dummy",
-            "cdm_field": "budgetFlag",
-            "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "string",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "erp_fields": [],
-            "cdm_field": "fiscalYear",
-            "map_type": "calculated",
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "string",
-            "operation": "FT",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT",
-            "sign_fields": [],
-            "expression": "",
-            "free_text": "2023"
-        },
-        {
-            "map_type": "dummy",
-            "cdm_field": "glAccountName",
-            "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "string",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "dummy",
-            "cdm_field": "segment01",
-            "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "string",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "direct",
-            "cdm_field": "amountEnding",
-            "erp_fields": [
-                {
-                    "id": 138157461626160,
-                    "file_name": "trialBalance_Trial Balance Report.csv",
-                    "field_name": "YTD Balance",
-                    "consider_valid": true,
-                    "null_check_valid": true,
-                    "null_check_comment": "Null values allowed",
-                    "type_check_valid": true,
-                    "type_check_comment": "All rows have valid data.",
-                    "valid": true
-                }
-            ],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "decimal",
-            "mandatory": true,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "dummy",
-            "cdm_field": "businessUnitCode",
+            "cdm_field": "segment04",
             "erp_fields": [],
             "file_name": "trialBalance_Trial Balance Report.csv",
             "report_type": "trialBalance",
@@ -187,7 +16,7 @@
             "cdm_field": "amountBeginning",
             "erp_fields": [
                 {
-                    "id": 138157460289328,
+                    "id": 139812367618544,
                     "file_name": "trialBalance_Trial Balance Report.csv",
                     "field_name": "Opening Balance",
                     "consider_valid": true,
@@ -207,17 +36,6 @@
         },
         {
             "map_type": "dummy",
-            "cdm_field": "amountBeginningLocal",
-            "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "decimal",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "dummy",
             "cdm_field": "amountBeginningReporting",
             "erp_fields": [],
             "file_name": "trialBalance_Trial Balance Report.csv",
@@ -228,10 +46,198 @@
             "extract_type": "REPORT"
         },
         {
+            "map_type": "direct",
+            "cdm_field": "amountEnding",
+            "erp_fields": [
+                {
+                    "id": 139812367621616,
+                    "file_name": "trialBalance_Trial Balance Report.csv",
+                    "field_name": "YTD Balance",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "file_name": "trialBalance_Trial Balance Report.csv",
+            "report_type": "trialBalance",
+            "data_type": "decimal",
+            "mandatory": true,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountEndingReporting",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance Report.csv",
+            "report_type": "trialBalance",
+            "data_type": "decimal",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountReportingCurrency",
+            "erp_fields": [],
+            "file_name": "trialBalance_Trial Balance Report.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "direct",
+            "cdm_field": "glAccountNumber",
+            "erp_fields": [
+                {
+                    "id": 139812367623088,
+                    "file_name": "trialBalance_Trial Balance Report.csv",
+                    "field_name": "Account",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true
+                }
+            ],
+            "file_name": "trialBalance_Trial Balance Report.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": true,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "period",
+            "erp_fields": [],
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
             "map_type": "dummy",
             "cdm_field": "segment02",
             "erp_fields": [],
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountBeginningLocal",
+            "erp_fields": [],
+            "report_type": "trialBalance",
+            "data_type": "decimal",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountCurrency",
+            "erp_fields": [],
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountEndingLocal",
+            "erp_fields": [],
+            "report_type": "trialBalance",
+            "data_type": "decimal",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "amountLocalCurrency",
+            "erp_fields": [],
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "balanceAsOfDate",
+            "erp_fields": [],
+            "report_type": "trialBalance",
+            "data_type": "datetime",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "erp_fields": [
+                {
+                    "order": 1,
+                    "id": 139812367620016,
+                    "file_name": "trialBalance_Trial Balance Report.csv",
+                    "field_name": "Debit",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "groupByFileName": "Trial Balance Report.csv"
+                },
+                {
+                    "order": 2,
+                    "id": 139812367614896,
+                    "file_name": "trialBalance_Trial Balance Report.csv",
+                    "field_name": "Credit",
+                    "consider_valid": true,
+                    "null_check_valid": true,
+                    "null_check_comment": "Null values allowed",
+                    "type_check_valid": true,
+                    "type_check_comment": "All rows have valid data.",
+                    "valid": true,
+                    "groupByFileName": "Trial Balance Report.csv"
+                }
+            ],
+            "cdm_field": "fiscalYear",
+            "map_type": "calculated",
             "file_name": "trialBalance_Trial Balance Report.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "operation": "CS",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT",
+            "sign_fields": [],
+            "expression": ""
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "glAccountName",
+            "erp_fields": [],
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "segment01",
+            "erp_fields": [],
             "report_type": "trialBalance",
             "data_type": "string",
             "mandatory": false,
@@ -242,18 +248,6 @@
             "map_type": "dummy",
             "cdm_field": "segment03",
             "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
-            "report_type": "trialBalance",
-            "data_type": "string",
-            "mandatory": false,
-            "erp_Id": "xero",
-            "extract_type": "REPORT"
-        },
-        {
-            "map_type": "dummy",
-            "cdm_field": "segment04",
-            "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
             "report_type": "trialBalance",
             "data_type": "string",
             "mandatory": false,
@@ -264,7 +258,26 @@
             "map_type": "dummy",
             "cdm_field": "segment05",
             "erp_fields": [],
-            "file_name": "trialBalance_Trial Balance Report.csv",
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "businessUnitCode",
+            "erp_fields": [],
+            "report_type": "trialBalance",
+            "data_type": "string",
+            "mandatory": false,
+            "erp_Id": "xero",
+            "extract_type": "REPORT"
+        },
+        {
+            "map_type": "dummy",
+            "cdm_field": "budgetFlag",
+            "erp_fields": [],
             "report_type": "trialBalance",
             "data_type": "string",
             "mandatory": false,

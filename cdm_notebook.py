@@ -244,11 +244,11 @@ if not local:
             print("Custom Mapping is present, ignoring Standard Mapping")
             standard_mapping = "null"
 else:
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))).replace(
-        "/notebooks/IntegrationEngine01", ""
-    )
+    # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))).replace(
+    #     "/notebooks/IntegrationEngine01", ""
+    # )
     BASE_DIR = '.'
-    ingestion_id = "clgwcb7o22419601plhanzkpeq"
+    ingestion_id = "clhahzblt1491701qo2zoecfsr"
     MAPPING_FILE_NAME = "mapping_file.json"
     dbfs_input_container_path = f"{BASE_DIR}/container/input/"
     dbfs_error_container_path = f"{BASE_DIR}/container/error/"
@@ -1536,9 +1536,15 @@ def create_report_content(mappings):
                 "report_type": report_name,
             }
             fields = dict()
+
             cdm_order_fields = [cdm_map["cdm_field"] for cdm_map in cdm_mapping]
             for cdm_map in cdm_mapping:
+                
+                
+                # print(fields,"\n\n")
                 cdm_field_name = cdm_map["cdm_field"]
+                print("cdm_field_name: ", cdm_field_name, "\n\n")
+                
                 if cdm_map["map_type"] == "dummy":
                     if cdm_field_name not in fields.keys():
                         fields[cdm_field_name] = [np.nan]
@@ -1603,6 +1609,12 @@ def create_report_content(mappings):
 
                 if cdm_map["map_type"] == "calculated":
 
+                    if cdm_map["operation"] == "FT":
+                        data = cdm_map["file_name"]
+                        file = input_files[file_name]["data"]
+                        fields[cdm_field_name] = [cdm_map['free_text'] for i in range(0, file.shape[0])]
+                        continue
+
                     if cdm_map["operation"] == "MC":
                         calculation = calculate_expression(cdm_map, input_files)
                         file_name = cdm_map["erp_fields"][0]["file_name"]
@@ -1621,6 +1633,8 @@ def create_report_content(mappings):
                         fields[cdm_field_name] = calculation.get("data")
 
                     if cdm_map["operation"] == "Journal Line Number":
+                        file_name = cdm_map["erp_fields"][0]["file_name"]
+                        erp_field_name = cdm_map["erp_fields"][0]["field_name"]
                         inp_data = list(
                             input_files[file_name]["data"][erp_field_name].values
                         )
@@ -1704,6 +1718,32 @@ def create_report_content(mappings):
                                         output_data.append(v)
                         print("output_data: ", output_data)
                         fields[cdm_field_name] = output_data
+                    
+
+
+
+                    if cdm_map["operation"] == "CS":
+                        erp_fields = list(
+                            sorted(cdm_map["erp_fields"], key=lambda i: i["order"])
+                        )
+                        fields_required = [
+                            field_info["field_name"] for field_info in erp_fields
+                        ]
+                        
+                        file_name = erp_fields[0]["file_name"]
+                        file_data = input_files[file_name]["data"]
+
+                        required_data = file_data[fields_required]
+
+                        records = list(required_data.to_records(index=False))
+                        
+                        for idx, values in enumerate(records):
+                            if values[0] != None:
+                                output_data.append(values[0])
+                            else:
+                                output_data.append(values[1])
+
+
 
                     if cdm_map["operation"] in ["ABS", "SPLIT", "DCI1"]:
                         file_name = cdm_map["erp_fields"][0]["file_name"]
@@ -1969,7 +2009,9 @@ def create_report_content(mappings):
                             output_data = [concat_string(record) for record in records]
                             # print("output_data: ",output_data)
                         fields[cdm_field_name] = output_data
+            
             fields = adjust_fields_data(fields)
+            
             if len(list(fields.keys())) > 0:
                 report_data["fields"] = fields
                 report_data["field_order"] = cdm_order_fields

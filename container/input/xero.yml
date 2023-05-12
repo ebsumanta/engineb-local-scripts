@@ -1,0 +1,279 @@
+erp_id: Xero_Global
+mappings:
+  - extract: REPORT
+    reports:
+      - input_files:
+          - encoding_format: utf-8
+            fields:
+              - cdm_field_names:
+                  - effectiveDate
+                  - journalId
+                  - journalIdLineNumber
+                  - transactionId
+                data_type: datetime
+                date_format: dd-mon-yy
+                field_name: Date
+                nullable: true
+                required: true
+              - cdm_field_names:
+                  - journalId
+                  - journalIdLineNumber
+                  - transactionId
+                data_type: string
+                date_format: ''
+                field_name: Source
+                nullable: true
+                required: true
+              - cdm_field_names:
+                  - jeHeaderDescription
+                data_type: string
+                date_format: ''
+                field_name: Description
+                nullable: true
+                required: true
+              - cdm_field_names:
+                  - journalId
+                  - journalIdLineNumber
+                  - transactionId
+                data_type: string
+                date_format: ''
+                field_name: Reference
+                nullable: true
+                required: true
+              - cdm_field_names:
+                  - amount
+                  - amountCreditDebitIndicator
+                data_type: number
+                date_format: ''
+                field_name: Debit
+                nullable: true
+                required: true
+              - cdm_field_names:
+                  - amount
+                  - amountCreditDebitIndicator
+                data_type: number
+                date_format: ''
+                field_name: Credit
+                nullable: true
+                required: true
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Gross
+                nullable: true
+                required: false
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Net
+                nullable: true
+                required: false
+              - cdm_field_names: []
+                data_type: number
+                date_format: ''
+                field_name: VAT
+                nullable: true
+                required: false
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: VAT Rate
+                nullable: true
+                required: false
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: VAT Rate Name
+                nullable: true
+                required: false
+              - cdm_field_names:
+                  - glAccountNumber
+                data_type: number
+                date_format: ''
+                field_name: Account Code
+                nullable: true
+                required: true
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Account
+                nullable: true
+                required: false
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Account Type
+                nullable: true
+                required: false
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Region
+                nullable: true
+                required: false
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Related account
+                nullable: true
+                required: false
+            file_name: GL Detail Report.csv
+            mandatory_field_check:
+              - cdm_field_name: amount
+                occurrence_count: 2
+              - cdm_field_name: amountCreditDebitIndicator
+                occurrence_count: 2
+              - cdm_field_name: effectiveDate
+                occurrence_count: 1
+              - cdm_field_name: glAccountNumber
+                occurrence_count: 1
+              - cdm_field_name: jeHeaderDescription
+                occurrence_count: 1
+              - cdm_field_name: journalId
+                occurrence_count: 3
+              - cdm_field_name: journalIdLineNumber
+                occurrence_count: 3
+              - cdm_field_name: transactionId
+                occurrence_count: 3
+            template:
+              sheet_name: ''
+              start_row: 5
+        report_type: glDetail
+      - input_files:
+          - encoding_format: utf-8
+            fields:
+              - cdm_field_names:
+                  - glAccountNumber
+                data_type: string
+                date_format: ''
+                field_name: Account
+                nullable: true
+                required: true
+              - cdm_field_names:
+                  - amountBeginning
+                data_type: number
+                date_format: ''
+                field_name: Opening Balance
+                nullable: true
+                required: true
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Debit
+                nullable: true
+                required: false
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Credit
+                nullable: true
+                required: false
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Net Movement
+                nullable: true
+                required: false
+              - cdm_field_names:
+                  - amountEnding
+                data_type: number
+                date_format: ''
+                field_name: YTD Balance
+                nullable: true
+                required: true
+            file_name: Trial Balance Report.csv
+            mandatory_field_check:
+              - cdm_field_name: amountBeginning
+                occurrence_count: 1
+              - cdm_field_name: amountEnding
+                occurrence_count: 1
+              - cdm_field_name: glAccountNumber
+                occurrence_count: 1
+            template:
+              exclusion:
+                aggr: and
+                rules:
+                  - column: 1
+                    contains: 'Total '
+              sheet_name: ''
+              start_row: 5 
+        report_type: trialBalance
+      - input_files:
+          - encoding_format: unicode_escape
+            fields:
+              - cdm_field_names:
+                  - glAccountNumber
+                data_type: number
+                date_format: ''
+                field_name: '*Code'
+                nullable: true
+                required: true
+              - cdm_field_names:
+                  - glAccountName
+                data_type: string
+                date_format: ''
+                field_name: '*Name'
+                nullable: true
+                required: true
+              - cdm_field_names:
+                  - accountSubtype
+                data_type: string
+                date_format: ''
+                field_name: '*Type'
+                nullable: true
+                required: true
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: '*Tax Code'
+                nullable: true
+                required: false
+              - cdm_field_names:
+                  - glAccountDescription
+                data_type: string
+                date_format: ''
+                field_name: Description
+                nullable: true
+                required: true
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Dashboard
+                nullable: true
+                required: false
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Expense Claims
+                nullable: true
+                required: false
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Enable Payments
+                nullable: true
+                required: false
+              - cdm_field_names: []
+                data_type: string
+                date_format: ''
+                field_name: Balance
+                nullable: true
+                required: false
+            file_name: Chart Of Accounts.csv
+            mandatory_field_check:
+              - cdm_field_name: accountType
+                occurrence_count: 0
+              - cdm_field_name: accountSubtype
+                occurrence_count: 1
+              - cdm_field_name: fsCaption
+                occurrence_count: 0
+              - cdm_field_name: glAccountDescription
+                occurrence_count: 1
+              - cdm_field_name: glAccountName
+                occurrence_count: 1
+              - cdm_field_name: glAccountNumber
+                occurrence_count: 1
+            template:
+              sheet_name: ''
+              start_row: 1
+        report_type: ChartOfAccounts
