@@ -1,58 +1,18 @@
-[
-    {
-        "order": 1,
-        "file_name": "glDetail.csv",
-        "operation_type": "Filter",
-        "filter_column": "amount",
-        "filter_condition": "gt",
-        "input": "10000",
-        "source": "0",
-        "relation": "",
-        "relation_with": "",
-        "is_unique": "",
-        "replace": "0",
-        "next": 2
-    },
-    {
-        "order": 2,
-        "file_name": "glDetail.csv",
-        "operation_type": "Filter",
-        "filter_column": "amount",
-        "filter_condition": "lt",
-        "input": "-10000",
-        "source": "0",
-        "relation": "and",
-        "relation_with": "1",
-        "is_unique": "",
-        "replace": "1",
-        "next": 4
-    },
-    {
-        "order": 4,
-        "file_name": "glDetail.csv",
-        "operation_type": "Net",
-        "filter_column": "",
-        "filter_condition": "lt",
-        "input": "",
-        "source": "0",
-        "relation": "",
-        "relation_with": "",
-        "is_unique": "",
-        "replace": "0",
-        "next": 3
-    },
-    {
-        "order": 3,
-        "file_name": "glDetail.csv",
-        "operation_type": "Count",
-        "filter_column": "glAccountNumber",
-        "filter_condition": "lt",
-        "input": "",
-        "source": "0",
-        "relation": "",
-        "relation_with": "",
-        "replace": "0",
-        "next": null,
-        "is_unique": "1"
+{
+    "data": {
+        "getDataIngestionGroupings": [
+            {
+                "id": "clhokjglh267701mrwzzzrwi4", 
+                "dataIngestion": {
+                    "name": "test-grouping", 
+                    "groupName": "None", 
+                    "groupId": "None"
+                }, 
+                "grouper": {
+                    "id": "clhokjgk1266801mr7i744r9x", 
+                    "name": "test-4"
+                }
+            }
+        ]
     }
-]
+}

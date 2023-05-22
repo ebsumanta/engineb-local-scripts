@@ -6,6 +6,7 @@ import pyspark
 from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 from pyspark.sql.functions import col
+from pyspark.sql.functions import sum
 import time
 import requests
 import csv
@@ -319,6 +320,17 @@ def process_count(dataframe,column_name,isUnique):
     finally:
         log("Exiting count")
 
+# cmd 14
+def process_sum(dataframe, column):
+    try:
+        dataframe.createOrReplaceTempView("process_sum")
+        sum_result = spark.sql(f"select sum({column}) from process_sum")
+        return sum_result
+    except Exception as ex:
+        log(f"Process Sum failure: {str(ex)}")
+    finally:
+        log(f"Exiting Sum")
+
 # cmd14
 def export_processed_df(data,dbfs_path,container_output_path,operation_name,daa_id,order):
     try:
@@ -417,7 +429,7 @@ def update_process_status(daa_id,order,status):
                 "query": "mutation UpdateOperationLog($status: String, $updateOperationLogId: String) {updateOperationLog(status: $status, id: $updateOperationLogId) {name}}",
                 "variables":{
                     "status": status,
-                    "updateOperationLogId": analytics_id
+                    "updateOperationLogId": daa_id
                 }
             }
             print(request_body)
@@ -435,8 +447,11 @@ def update_process_status(daa_id,order,status):
 def main():
     try:
         data = read_content()
+        
         dataframe_container = dict()
+        
         print(global_data_config['config'])
+        
         for operation in global_data_config['config']['operation']:
             print(operation)
             # for each operation , process its filters
@@ -445,7 +460,7 @@ def main():
             if global_data_config['config']['source'] != "" and global_data_config['config']['source'] != " " and global_data_config['config']['source'] != None:
                 if global_data_config['config']['source'] != "" and operation['order'] == 1:
                     log("Order 1 should always take original dataframe")
-                    raise Exception("")
+                    raise Exception("First OPeration can not have any source. It will take the source by default.")
                 else:
                     temp_data = dataframe_container[str(operation['order'])]
             else:
