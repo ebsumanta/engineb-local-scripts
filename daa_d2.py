@@ -484,6 +484,36 @@ def main():
                         )
                     except Exception as ex:
                         print(str(ex))
+                if operation_type == 'Sum':
+                    try:
+                        temp_dfs.append(
+                            process_sum(
+                            condition['filter_column'],
+                            condition['filter_condition'],
+                            condition['input'],temp_data)
+                        )
+                    except Exception as ex:
+                        print(str(ex))
+                if operation_type == 'Count':
+                    try:
+                        temp_dfs.append(
+                            process_count(
+                            condition['filter_column'],
+                            condition['filter_condition'],
+                            condition['input'],temp_data)
+                        )
+                    except Exception as ex:
+                        print(str(ex))
+                if operation_type == 'Net':
+                    try:
+                        temp_dfs.append(
+                            process_net(
+                            condition['filter_column'],
+                            condition['filter_condition'],
+                            condition['input'],temp_data)
+                        )
+                    except Exception as ex:
+                        print(str(ex))
             
             # concat dataframes from the temparary array 
             opx_dataframe = None
