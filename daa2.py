@@ -189,14 +189,29 @@ log(f"PySpark Session created in {str(time.time() - start_time)}")
 
 # COMMAND ----------
 
-def read_content():
+def read_content(past_data_path=''):
     try:
+        # past used data might not be in hdfs, we need to copy the data
+        if not local and past_data_path != '':
+            past_file_path = f"{global_data_config['INPUT_CONTAINER_PATH']}{past_data_path}"
+            dbutils.fs.cp(past_file_path, global_data_config['DBFS_PATH'], recurse=True)
+            log("past file  copied")
         # file path example: data-ingestions/{clfqy13lt066501p8b3y6ra0v}/share/zip/cdm.zip
         log("Trying to read content from the file")
-        if local:
-            hdfs_file_path = f"./{global_data_config['DBFS_PATH']}{global_data_config['UNZIPED_DIR']}/{global_data_config['config']['file_name']}"
+        
+        if past_data_path != "":
+            if local:
+                hdfs_file_path = f"./{past_data_path}"
+            else:
+                hdfs_file_path = f"{past_data_path}"
         else:
-            hdfs_file_path = f"{global_data_config['DBFS_PATH']}{global_data_config['UNZIPED_DIR']}/{global_data_config['config']['file_name']}"
+            if local:
+                hdfs_file_path = f"./{global_data_config['DBFS_PATH']}{global_data_config['UNZIPED_DIR']}/{global_data_config['config']['file_name']}"
+            else:
+                hdfs_file_path = f"{global_data_config['DBFS_PATH']}{global_data_config['UNZIPED_DIR']}/{global_data_config['config']['file_name']}"
+        
+        
+        
         log(f"HDFS FILE PATH: {hdfs_file_path}")
         dataframe = spark.read.option('header','true').csv(f"{hdfs_file_path}")
         log("able to read dataframe")
@@ -380,19 +395,30 @@ def update_graphql_order_status(order,daa_id,status):
 
 def main():
     try:
-        data = read_content()
-        result_data_holder = dict()
+        # for retry, data can not be available on run time, 
+        # we have to read from container, then load the data
+        if global_data_config['config'].get('source') is None:
+            if global_data_config['config'].get('source') != "":
+                data = read_content(global_data_config['config'].get('source'))
+            else:
+                data = read_content()
+        else:
+            data = read_content()
         
+        root_holder = dict()
         
         for function in global_data_config['config']['operation']:
             data_to_use = None
             temp_data_holder = []
-            
-            
+            result_data_holder = dict()
+            log(f"Executing order: {function['order']}")
+            print("temp_data_holder initiation: ", temp_data_holder)
+            print("result_data_holder: ", result_data_holder)
             if function["source"] == "":
                 data_to_use = data
             else:
-                data_to_use = result_data_holder[str(function["source"])][0]
+                log(f"taking source mentioned data (child source)")
+                data_to_use = root_holder.get(str(function["source"]))[0]
                 
             for operation in function['conditions']:
                 #print("operation: ",operation)
@@ -404,8 +430,6 @@ def main():
                         data_to_use
                     )
                     data_to_use = filter_output
-                
-                
                 if function['operation_type'] == "Count":
                     count_output = process_count(
                         data_to_use,
@@ -419,17 +443,22 @@ def main():
                     )
                     temp_data_holder.append(net_output)
                 if function['operation_type'] == "Sum":
-                    #print("Calling sum.....")
+                    print("Calling sum.....")
                     sum_output = process_sum(
                         data_to_use,
                         operation['filter_column']
                     )
                     #print("sum_output: ", sum_output,"\n\n")
                     temp_data_holder.append(sum_output)
+                print("temp_data_holder under for loop: ",temp_data_holder, len(temp_data_holder))
             
-            temp_data_holder.append(data_to_use)
+            # it should only work for Filter type operation
+            if function['operation_type'] == "Filter":
+                temp_data_holder.append(data_to_use)
            
             opx_dataframe = None
+            print("opx_dataframe before merger: ",opx_dataframe)
+            print("temp_data_holder: ",temp_data_holder, len(temp_data_holder))
             if len(temp_data_holder) > 1:
                 for i in range(1,len(temp_data_holder)):
                     if i == 1:
@@ -438,8 +467,9 @@ def main():
                         opx_dataframe = opx_dataframe.union(temp_data_holder[i])
             else:
                 opx_dataframe = temp_data_holder
-
+            print("opx_dataframe: ", opx_dataframe)
             result_data_holder[str(function['order'])] = opx_dataframe
+            root_holder[str(function['order'])] = opx_dataframe
             # convert the dataframe to json
             print("saving json")
             convert_dataframe_to_json_export(
@@ -461,7 +491,7 @@ def main():
                 function['order'],
                 global_analytics_id,
                 'SUCCESS')
-            print("\n\n\n\n\n\n\n\n")
+            print("result_data_holder (end): ",result_data_holder,"\n\n\n\n\n\n\n\n")
             
      
     except Exception as ex:

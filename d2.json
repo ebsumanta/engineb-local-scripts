@@ -81,6 +81,20 @@
                     "is_unique": ""
                 }
             ]
+        },
+        {
+            "order": 3,
+            "file_name": "glDetail.csv",
+            "operation_type": "Sum",
+            "source": "2",
+            "conditions": [
+                {
+                    "filter_column": "amount",
+                    "filter_condition": "",
+                    "input": "",
+                    "is_unique": ""
+                }
+            ]
         }
     ]
 }
