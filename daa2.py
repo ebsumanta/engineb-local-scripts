@@ -209,9 +209,7 @@ def read_content(past_data_path=''):
                 hdfs_file_path = f"./{global_data_config['DBFS_PATH']}{global_data_config['UNZIPED_DIR']}/{global_data_config['config']['file_name']}"
             else:
                 hdfs_file_path = f"{global_data_config['DBFS_PATH']}{global_data_config['UNZIPED_DIR']}/{global_data_config['config']['file_name']}"
-        
-        
-        
+       
         log(f"HDFS FILE PATH: {hdfs_file_path}")
         dataframe = spark.read.option('header','true').csv(f"{hdfs_file_path}")
         log("able to read dataframe")
@@ -523,9 +521,6 @@ def main():
                     'SUCCESS')
                 print("result_data_holder (end): ",result_data_holder,"\n\n\n\n\n\n\n\n")
             # export the result dataframe to container
-            
-            
-     
     except Exception as ex:
         dispatch_response_graphql("FAILED",global_analytics_id)
         log(f"exception(main): {str(ex)}")
