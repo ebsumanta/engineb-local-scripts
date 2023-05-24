@@ -95,6 +95,26 @@
                     "is_unique": ""
                 }
             ]
+        },
+        {
+            "order": 4,
+            "file_name": "glDetail.csv",
+            "operation_type": "Count",
+            "source": "2",
+            "conditions": [
+                {
+                    "filter_column": "glAccountNumber",
+                    "filter_condition": "",
+                    "input": "",
+                    "is_unique": ""
+                },
+                {
+                    "filter_column": "glAccountNumber",
+                    "filter_condition": "",
+                    "input": "",
+                    "is_unique": true
+                }
+            ]
         }
     ]
 }

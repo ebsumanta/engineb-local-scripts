@@ -302,20 +302,24 @@ def process_net(dataframe):
         return spark.createDataFrame(data=data, schema = columns)
     except Exception as ex:
         log(f"{str(ex)}")
-def process_count(dataframe,column_name,isUnique):
+def process_count(dataframe,column,isUnique):
     try:
         # pyspark SQL Like implementation
         log("Processing count. Creating sql like dataframe for sql count operation")
-        dataframe.createOrReplaceTempView("eBData")
+        dataframe = dataframe.createOrReplaceTempView("eBData")
         log("SQL like datafrae created for count")
-        count=0
         if not isUnique:
             log("not unique")
-            return spark.sql(f"select count({column_name}) as count from eBData")
+            data = spark.sql(f"select count({str(column)}) as count from eBData")
+            print(type(data))
+            data.show()
+            return data
         else:
             log("using distinct as its unique")
-            return spark.sql(f"select count( DISTINCT {column_name}) as count from eBData")
-
+            data = spark.sql(f"select count( DISTINCT {str(column)}) as count from eBData")
+            print(type(data))
+            data.show()
+            return data
     except Exception as ex:
         log(f"Exception(process_count): {str(ex)}")
     finally:
@@ -336,8 +340,12 @@ def process_sum(dataframe, column):
         log(f"Exiting Sum")
 def convert_dataframe_to_json_export(dataframe, file_name, dbfs, output):
     try:
+        log("Inside df to json")
+        print(type(dataframe))
         result_df = dataframe.limit(10)
+        log("Result df prepared upto 10 entries")
         dict_rows = [row.asDict(True) for row in result_df.collect()]
+        log("result df to dict row done")
         json_object_tmp = json.dumps({"data": dict_rows}, indent=4)
         if not local:
             with open(f"/dbfs{dbfs}{file_name}", "w") as outfile:
@@ -351,7 +359,8 @@ def convert_dataframe_to_json_export(dataframe, file_name, dbfs, output):
                 f'{output}{file_name}',
                 recurse=True)
     except Exception as ex:
-        log(f"Error(export_processed_df_to_json): {str(ex)}")
+        print(str(ex))
+        log(f"Error(convert_dataframe_to_json_export): {str(ex)}")
 def convert_dataframe_to_csv_export(dataframe, file_name, dbfs, output):
     try:
         # data.show()
@@ -467,31 +476,54 @@ def main():
                         opx_dataframe = opx_dataframe.union(temp_data_holder[i])
             else:
                 opx_dataframe = temp_data_holder
+            
             print("opx_dataframe: ", opx_dataframe)
             result_data_holder[str(function['order'])] = opx_dataframe
             root_holder[str(function['order'])] = opx_dataframe
             # convert the dataframe to json
             print("saving json")
-            convert_dataframe_to_json_export(
-                opx_dataframe[0],
-                f"tmp_{function['operation_type']}_{function['order']}.json",
-                global_data_config['DBFS_PATH'],
-                global_data_config["OUTPUT_CONTAINER_PATH"]
-            )
+            if function['operation_type'] in ["Filter","Sum"]:
+                convert_dataframe_to_json_export(
+                    opx_dataframe[0],
+                    f"tmp_{function['operation_type']}_{function['order']}.json",
+                    global_data_config['DBFS_PATH'],
+                    global_data_config["OUTPUT_CONTAINER_PATH"]
+                )
+                print("saving csv")
+                convert_dataframe_to_csv_export(
+                    opx_dataframe[0], 
+                    f"tmp_{function['operation_type']}_{function['order']}.csv", 
+                    global_data_config['DBFS_PATH'],
+                    global_data_config["OUTPUT_CONTAINER_PATH"])
+                # update the graphql about the order execution status
+                print("updaing db")
+                update_graphql_order_status(
+                    function['order'],
+                    global_analytics_id,
+                    'SUCCESS')
+                print("result_data_holder (end): ",result_data_holder,"\n\n\n\n\n\n\n\n")
+            else:
+                convert_dataframe_to_json_export(
+                    opx_dataframe,
+                    f"tmp_{function['operation_type']}_{function['order']}.json",
+                    global_data_config['DBFS_PATH'],
+                    global_data_config["OUTPUT_CONTAINER_PATH"]
+                )
+                print("saving csv")
+                convert_dataframe_to_csv_export(
+                    opx_dataframe, 
+                    f"tmp_{function['operation_type']}_{function['order']}.csv", 
+                    global_data_config['DBFS_PATH'],
+                    global_data_config["OUTPUT_CONTAINER_PATH"])
+                # update the graphql about the order execution status
+                print("updaing db")
+                update_graphql_order_status(
+                    function['order'],
+                    global_analytics_id,
+                    'SUCCESS')
+                print("result_data_holder (end): ",result_data_holder,"\n\n\n\n\n\n\n\n")
             # export the result dataframe to container
-            print("saving csv")
-            convert_dataframe_to_csv_export(
-                opx_dataframe[0], 
-                f"tmp_{function['operation_type']}_{function['order']}.csv", 
-                global_data_config['DBFS_PATH'],
-                global_data_config["OUTPUT_CONTAINER_PATH"])
-            # update the graphql about the order execution status
-            print("updaing db")
-            update_graphql_order_status(
-                function['order'],
-                global_analytics_id,
-                'SUCCESS')
-            print("result_data_holder (end): ",result_data_holder,"\n\n\n\n\n\n\n\n")
+            
             
      
     except Exception as ex:
