@@ -1,0 +1,29 @@
+{
+    "log": [
+        "Creating local execution container",
+        "Json reading completed",
+        "Unzipping..",
+        "Unzip Completed",
+        "PySpark Session created in 9.306529998779297",
+        "Trying to read content from the file",
+        "HDFS FILE PATH: daa/hdfs/cdm/glDetail.csv",
+        "able to read dataframe",
+        "Processing operation of order: 1",
+        "Operation completed. Trying to convert to PandasDF",
+        "PandasDF created. trying to read same file for verification.",
+        "Able to read HDFS exported processed csv using pandas function. Good to export to container",
+        "Exporting the output file to container",
+        "Preparing top 10 resulted rows for json export",
+        "top 10 rows are extracted",
+        "dictionary data prepared for json export",
+        "temp json created for export",
+        "Json is created at HDFS. preparing for Container export",
+        "JSON file exported to container. Export File name: tmp_Net_clgxw6kzz0069ec1w5dligfvl.json",
+        "Exported to container",
+        "graphQL Path variable data: aa/output/",
+        "GraphQL URL: http://localhost:7072/graphql",
+        "Removing processed file from HDFS storage",
+        "HDFS storage cleared",
+        "Exporting log to container"
+    ]
+}

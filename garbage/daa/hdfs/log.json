@@ -1,0 +1,30 @@
+{
+    "log": [
+        "Creating local execution container",
+        "Json reading completed",
+        "Unzipping..",
+        "Unzip Completed",
+        "PySpark Session created in 5.397253751754761",
+        "Trying to read content from the file",
+        "HDFS FILE PATH: daa/hdfs/cdm/glDetail.csv",
+        "able to read dataframe",
+        "column_name: amount | condition: gt | input_data: 1000",
+        "greater than filter triggred",
+        "Showing step data as it is local",
+        "Exception(export_processed_df): 'NoneType' object has no attribute 'show'",
+        "Error(export_processed_df_to_json): 'NoneType' object has no attribute 'limit'",
+        "Exception(update_process_status): local variable 'path' referenced before assignment",
+        "column_name: amount | condition: gt | input_data: 2000",
+        "greater than filter triggred",
+        "Showing step data as it is local",
+        "Exception(export_processed_df): 'NoneType' object has no attribute 'show'",
+        "Error(export_processed_df_to_json): 'NoneType' object has no attribute 'limit'",
+        "Exception(update_process_status): local variable 'path' referenced before assignment",
+        "Exported to container",
+        "graphQL Path variable data: aa/output/",
+        "GraphQL URL: http://localhost:7072/graphql",
+        "Removing processed file from HDFS storage",
+        "HDFS storage cleared",
+        "Exporting log to container"
+    ]
+}

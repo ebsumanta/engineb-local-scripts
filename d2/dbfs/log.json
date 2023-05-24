@@ -1,0 +1,20 @@
+{
+    "log": [
+        "Json reading completed",
+        "Unzip Completed",
+        "UNZIPED_DIR: cdm",
+        "PySpark Session created in 5.26966667175293",
+        "Trying to read content from the file",
+        "HDFS FILE PATH: ./d2/dbfs/cdm/glDetail.csv",
+        "able to read dataframe",
+        "column_name: amount | condition: gt | input_data: 1000",
+        "greater than filter triggred",
+        "column_name: journalIdLineNumber | condition: eq | input_data: 1",
+        "equal to filter triggred",
+        "column_name: glAccountNumber | condition: eq | input_data: 13101",
+        "equal to filter triggred",
+        "column_name: jeHeaderDescription | condition: eq | input_data: BOM Build",
+        "equal to filter triggred",
+        "Exporting log to container"
+    ]
+}

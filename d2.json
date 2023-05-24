@@ -2,6 +2,7 @@
     "export_file_name": "test-1.csv",
     "file_container_path": "data-ingestions/clhhgpv2l0136xm1o1256ky62/share/zip/cdm.zip",
     "file_name": "glDetail.csv",
+    "source": "",
     "column_name": [
         "amount",
         "amountCurrency",
@@ -52,6 +53,12 @@
                     "filter_condition": "gt",
                     "input": "1000",
                     "is_unique": ""
+                },
+                {
+                    "filter_column": "journalIdLineNumber",
+                    "filter_condition": "eq",
+                    "input": "1",
+                    "is_unique": ""
                 }
             ]
         },
@@ -59,12 +66,18 @@
             "order": 2,
             "file_name": "glDetail.csv",
             "operation_type": "Filter",
-            "source": "1",
+            "source": "",
             "conditions": [
                 {
-                    "filter_column": "amount",
-                    "filter_condition": "gt",
-                    "input": "2000",
+                    "filter_column": "glAccountNumber",
+                    "filter_condition": "eq",
+                    "input": "13101",
+                    "is_unique": ""
+                },
+                {
+                    "filter_column": "jeHeaderDescription",
+                    "filter_condition": "eq",
+                    "input": "BOM Build",
                     "is_unique": ""
                 }
             ]

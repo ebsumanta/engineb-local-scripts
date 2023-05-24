@@ -1,0 +1,157 @@
+{
+	"data": {
+		"getDataIngestionGroupings": [
+            {
+			"id": "clgz0slhh0807dt1wz2zma4hc",
+			"name": "dishant-2",
+			"startDate": "2023-04-27T11:06:53.764Z",
+			"createdBy": "dishant@engineb.com",
+			"grouper": {
+				"groupingCodes": [{
+					"mapped": null,
+					"accountNameId": "clgyupiaz00gmd71w2esidsmz",
+					"accountName": null,
+					"fsCaptionId": null,
+					"fsCaption": null,
+					"accountSubTypeId": null,
+					"accountSubType": null,
+					"accountTypeId": null,
+					"accountType": null,
+					"nominalCode": "800",
+					"glAccountName": "Accounts Payable ",
+					"grouperId": "clgz0slhc0798dt1wmknztgot"
+				}, {
+					"mapped": null,
+					"accountNameId": "clgyupiaz00gmd71w2esidsmz",
+					"accountName": null,
+					"fsCaptionId": null,
+					"fsCaption": null,
+					"accountSubTypeId": null,
+					"accountSubType": null,
+					"accountTypeId": null,
+					"accountType": null,
+					"nominalCode": "610",
+					"glAccountName": "Accounts Receivable ",
+					"grouperId": "clgz0slhc0798dt1wmknztgot"
+				}, {
+					"mapped": null,
+					"accountNameId": "clgyupiaz00gmd71w2esidsmz",
+					"accountName": null,
+					"fsCaptionId": null,
+					"fsCaption": null,
+					"accountSubTypeId": null,
+					"accountSubType": null,
+					"accountTypeId": null,
+					"accountType": null,
+					"nominalCode": "90",
+					"glAccountName": "Business Bank Account ",
+					"grouperId": "clgz0slhc0798dt1wmknztgot"
+				}, {
+					"mapped": null,
+					"accountNameId": "clgyupiaz00gmd71w2esidsmz",
+					"accountName": null,
+					"fsCaptionId": null,
+					"fsCaption": null,
+					"accountSubTypeId": null,
+					"accountSubType": null,
+					"accountTypeId": null,
+					"accountType": null,
+					"nominalCode": "412",
+					"glAccountName": "Consulting ",
+					"grouperId": "clgz0slhc0798dt1wmknztgot"
+				}, {
+					"mapped": null,
+					"accountNameId": "clgyupiaz00gmd71w2esidsmz",
+					"accountName": null,
+					"fsCaptionId": null,
+					"fsCaption": null,
+					"accountSubTypeId": null,
+					"accountSubType": null,
+					"accountTypeId": null,
+					"accountType": null,
+					"nominalCode": "429",
+					"glAccountName": "General Expenses ",
+					"grouperId": "clgz0slhc0798dt1wmknztgot"
+				}, {
+					"mapped": null,
+					"accountNameId": "clgyupiaz00gmd71w2esidsmz",
+					"accountName": null,
+					"fsCaptionId": null,
+					"fsCaption": null,
+					"accountSubTypeId": null,
+					"accountSubType": null,
+					"accountTypeId": null,
+					"accountType": null,
+					"nominalCode": "840",
+					"glAccountName": "Historical Adjustment ",
+					"grouperId": "clgz0slhc0798dt1wmknztgot"
+				}, {
+					"mapped": null,
+					"accountNameId": "clgyupiaz00gmd71w2esidsmz",
+					"accountName": null,
+					"fsCaptionId": null,
+					"fsCaption": null,
+					"accountSubTypeId": null,
+					"accountSubType": null,
+					"accountTypeId": null,
+					"accountType": null,
+					"nominalCode": "445",
+					"glAccountName": "Light, Power, Heating ",
+					"grouperId": "clgz0slhc0798dt1wmknztgot"
+				}, {
+					"mapped": null,
+					"accountNameId": "clgyupiaz00gmd71w2esidsmz",
+					"accountName": null,
+					"fsCaptionId": null,
+					"fsCaption": null,
+					"accountSubTypeId": null,
+					"accountSubType": null,
+					"accountTypeId": null,
+					"accountType": null,
+					"nominalCode": "260",
+					"glAccountName": "Other Revenue ",
+					"grouperId": "clgz0slhc0798dt1wmknztgot"
+				}, {
+					"mapped": null,
+					"accountNameId": "clgyupiaz00gmd71w2esidsmz",
+					"accountName": null,
+					"fsCaptionId": null,
+					"fsCaption": null,
+					"accountSubTypeId": null,
+					"accountSubType": null,
+					"accountTypeId": null,
+					"accountType": null,
+					"nominalCode": "461",
+					"glAccountName": "Printing & Stationery ",
+					"grouperId": "clgz0slhc0798dt1wmknztgot"
+				}, {
+					"mapped": null,
+					"accountNameId": "clgyupiaz00gmd71w2esidsmz",
+					"accountName": null,
+					"fsCaptionId": null,
+					"fsCaption": null,
+					"accountSubTypeId": null,
+					"accountSubType": null,
+					"accountTypeId": null,
+					"accountType": null,
+					"nominalCode": "200",
+					"glAccountName": "Sales ",
+					"grouperId": "clgz0slhc0798dt1wmknztgot"
+				}, {
+					"mapped": null,
+					"accountNameId": "clgyupiaz00gmd71w2esidsmz",
+					"accountName": null,
+					"fsCaptionId": null,
+					"fsCaption": null,
+					"accountSubTypeId": null,
+					"accountSubType": null,
+					"accountTypeId": null,
+					"accountType": null,
+					"nominalCode": "820",
+					"glAccountName": "VAT ",
+					"grouperId": "clgz0slhc0798dt1wmknztgot"
+				}]
+			}
+		}]
+	}
+}

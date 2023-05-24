@@ -1,0 +1,42 @@
+[
+    {
+        "order": 1,
+        "file_name": "glDetail.csv",
+        "operation_type": "Filter",
+        "source": "",
+        "conditions": [
+            {
+                "filter_column": "amount",
+                "filter_condition": "gt",
+                "input": "10000",
+                "is_unique": ""
+            },
+            {
+                "filter_column": "journalIdLineNumber",
+                "filter_condition": "eq",
+                "input": "1",
+                "is_unique": ""
+            }
+        ]
+    },
+    {
+        "order": 2,
+        "file_name": "glDetail.csv",
+        "operation_type": "Filter",
+        "source": "",
+        "conditions": [
+            {
+                "filter_column": "jeHeaderDescription",
+                "filter_condition": "eq",
+                "input": "BOM Build",
+                "is_unique": ""
+            },
+            {
+                "filter_column": "glAccountNumber",
+                "filter_condition": "eq",
+                "input": "13101",
+                "is_unique": ""
+            }
+        ]
+    }
+]

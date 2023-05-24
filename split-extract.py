@@ -20,8 +20,8 @@ def remove_inside_get_outside(account, config):
 # alternative of recoil: zustand
 
 extract_split_fields = {
-        "opening_char": '(',
-        "closing_char": ')',
+        "opening_char": '-',
+        "closing_char": '',
         "inside_outside": 'inside'
     }
 input_data = [
@@ -39,8 +39,10 @@ input_data = [
     "Subscriptions (485)",
     "Telephone & Internet (489)",
     "Travel - National (493)",
-    "Account Balance (700) (qabc)"
+    "Account Balance (700) (qabc)",
+    "43500 - some text - anoter text"
 ]
+
 output_data = list()
 
 for account in input_data:
@@ -50,13 +52,10 @@ for account in input_data:
         )
         if extract_split_fields["inside_outside"] == "outside":
             if "-" in account:
-                output_data.append(
-                    "".join(
-                        splited_account[
-                            0 : (len(splited_account) - 1)
-                        ]
-                    )
-                )
+                for i in splited_account:
+                    if i.strip().isnumeric():
+                        output_data.append(i.strip())
+                
             else:
                 output_data.append(
                     remove_inside_get_outside(

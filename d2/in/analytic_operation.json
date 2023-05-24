@@ -1,0 +1,86 @@
+{
+    "export_file_name": "test-1.csv",
+    "file_container_path": "data-ingestions/clhhgpv2l0136xm1o1256ky62/share/zip/cdm.zip",
+    "file_name": "glDetail.csv",
+    "source": "",
+    "column_name": [
+        "amount",
+        "amountCurrency",
+        "approvedDateTime",
+        "effectiveDate",
+        "amountCreditDebitIndicator",
+        "approvedBy",
+        "businessUnitCode",
+        "enteredBy",
+        "fiscalYear",
+        "jeHeaderDescription",
+        "journalEntryType",
+        "journalIdLineNumber",
+        "lastModifiedDate",
+        "journalId",
+        "lastModifiedBy",
+        "localAmount",
+        "period",
+        "reportingAmountCurrency",
+        "reversalJournalId",
+        "segment02",
+        "segment04",
+        "sourceId",
+        "taxCode",
+        "userDefined1",
+        "glAccountNumber",
+        "jeLineDescription",
+        "segment03",
+        "segment05",
+        "tags",
+        "transactionId",
+        "userDefined2",
+        "reportingAmount",
+        "segment01",
+        "enteredDateTime",
+        "localAmountCurrency",
+        "reversalIndicator"
+    ],
+    "operation": [
+        {
+            "order": 1,
+            "file_name": "glDetail.csv",
+            "operation_type": "Filter",
+            "source": "",
+            "conditions": [
+                {
+                    "filter_column": "amount",
+                    "filter_condition": "gt",
+                    "input": "1000",
+                    "is_unique": ""
+                },
+                {
+                    "filter_column": "journalIdLineNumber",
+                    "filter_condition": "eq",
+                    "input": "1",
+                    "is_unique": ""
+                }
+            ]
+        },
+        {
+            "order": 2,
+            "file_name": "glDetail.csv",
+            "operation_type": "Filter",
+            "source": "",
+            "conditions": [
+                {
+                    "filter_column": "glAccountNumber",
+                    "filter_condition": "eq",
+                    "input": "13101",
+                    "is_unique": ""
+                },
+                {
+                    "filter_column": "jeHeaderDescription",
+                    "filter_condition": "eq",
+                    "input": "BOM Build",
+                    "is_unique": ""
+                }
+            ]
+        }
+    ]
+}
